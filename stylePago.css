@@ -1,0 +1,108 @@
+body {
+    background: #f7f7f7;
+}
+
+.pago-contenedor {
+    max-width: 900px;
+    margin: 3rem auto;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    padding: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.formulario-pago, .resumen-pedido {
+    flex: 1 1 320px;
+}
+
+.formulario-pago h2, .resumen-pedido h2 {
+    margin-bottom: 1.5rem;
+    color: var(--secundario);
+}
+
+.formulario-pago label {
+    display: block;
+    margin-bottom: .5rem;
+    font-weight: bold;
+}
+
+.formulario-pago input, .formulario-pago select {
+    width: 100%;
+    padding: .8rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+    background: #f9f9f9;
+    transition: border-color 0.2s;
+}
+.formulario-pago input:focus {
+    border-color: var(--secundario);
+    outline: none;
+}
+
+.resumen-pedido {
+    background: #fafafa;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    height: fit-content;
+    min-width: 260px;
+}
+
+.resumen-pedido ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.resumen-pedido li {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.resumen-pedido .total {
+    font-weight: bold;
+    font-size: 1.7rem;
+    margin-top: 1.5rem;
+    text-align: right;
+}
+
+.boton-pago {
+    width: 100%;
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+.regresar-link {
+    display: inline-block;
+    color: var(--secundario);
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.regresar-link:hover {
+    color: var(--primario);
+    text-decoration: none;
+}
+
+@media (max-width: 800px) {
+    .pago-contenedor {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+    .resumen-pedido {
+        min-width: unset;
+        margin-top: 2rem;
+    }
+}

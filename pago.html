@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago | PopaShoes</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preload" href="stylePago.css" as="stylePago">
+    <link rel="stylesheet" href="stylePago.css">
+</head>
+<body>
+    <header>
+        <h1 class="titulo">PopaShoes <span>Pago</span></h1>
+    </header>
+    <div class="pago-contenedor">
+        <a href="Proyecto.html" class="regresar-link">&#8592; Regresar a la tienda</a>
+        <form class="formulario-pago">
+            <h2>Datos de Envío</h2>
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="direccion">Dirección</label>
+            <input type="text" id="direccion" name="direccion" required>
+            <label for="ciudad">Ciudad</label>
+            <input type="text" id="ciudad" name="ciudad" required>
+            <label for="cp">Código Postal</label>
+            <input type="text" id="cp" name="cp" required>
+            <h2>Datos de Pago</h2>
+            <label for="tarjeta">Número de Tarjeta</label>
+            <input type="text" id="tarjeta" name="tarjeta" maxlength="16" required>
+            <label for="vencimiento">Vencimiento</label>
+            <input type="text" id="vencimiento" name="vencimiento" placeholder="MM/AA" maxlength="5" required>
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" name="cvv" maxlength="4" required>
+            <button type="submit" class="boton boton-pago">Finalizar compra</button>
+        </form>
+        <div class="resumen-pedido">
+            <h2>Resumen del Pedido</h2>
+            <ul>
+                <li>Jordan 1 Low Dior <span>$120,000.00</span></li>
+                <li>Dunk Low Freddy Krueger <span>$1,200,000.00</span></li>
+                <li>Jordan 1 Travis Scott x Fragment <span>$32,499.00</span></li>
+            </ul>
+            <div class="total">Total: $1,352,499.00</div>
+        </div>
+    </div>
+</body>
+</html>
