@@ -1,0 +1,25 @@
+{
+  "name": "proyectoweb",
+  "version": "1.0.0",
+  "main": "Funcionalidad.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SoyJuanGlez/Programacion-WEB.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SoyJuanGlez/Programacion-WEB/issues"
+  },
+  "homepage": "https://github.com/SoyJuanGlez/Programacion-WEB#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongoose": "^8.16.2"
+  }
+}
