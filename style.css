@@ -159,52 +159,88 @@ h1,h2,h3{
 
 .productos {
     display: flex;
-    flex-direction: column;
     gap: 2rem;
-    align-items: center;
-}
-
-@media (min-width: 768px) {
-    .productos {
-        flex-direction: row;
-        justify-content: center;
-    }
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch; /* Asegura que todos los tarjetones tengan la misma altura */
 }
 
 .producto {
+    width: 260px;
+    min-height: 410px;
     background: #fff;
-    border-radius: 1rem;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    padding: 2rem;
-    text-align: center;
-    width: 250px;
-    transition: transform 0.2s;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px #0001;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem 1.5rem 1rem;
+    box-sizing: border-box;
+    transition: transform 0.25s cubic-bezier(.21,1.02,.73,1), box-shadow 0.25s cubic-bezier(.21,1.02,.73,1);
+    position: relative;
+    justify-content: flex-start;
 }
 
-.producto:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+.producto:hover,
+.producto:focus-within {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 8px 32px #0002, 0 2px 12px #0001;
+    z-index: 2;
 }
 
 .producto img {
-    border-radius: 1rem;
+    width: 100%;
+    max-width: 180px;
+    height: 180px;
+    object-fit: contain;
     margin-bottom: 1rem;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
+}
+
+.producto h3, .producto p, .producto span {
+    text-align: center;
 }
 
 .producto h3 {
-    margin: 1rem 0 0.5rem 0;
-    color: var(--secundario);
+    min-height: 2.5em; /* Para alinear títulos de diferente longitud */
+    margin-bottom: 0.5rem;
+}
+
+.producto p {
+    min-height: 3.2em; /* Para alinear descripciones de diferente longitud */
+    margin-bottom: 0.5rem;
 }
 
 .producto span {
-    display: block;
-    margin-top: 1rem;
-    font-size: 1.6rem;
-    color: var(--primario);
     font-weight: bold;
+    color: #0097A7;
+    margin-top: 0.5rem;
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.producto .boton {
+    margin-top: auto;
+    width: 90%;
+    background: var(--secundario);
+    color: var(--blanco);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.7rem;
+    font-weight: bold;
+    padding: 1rem 0;
+    box-shadow: 0 2px 8px #0001;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.producto .boton:hover {
+    background: var(--primario);
+    color: var(--oscuro);
+    box-shadow: 0 4px 16px #0002;
+    cursor: pointer;
 }
 
 .carrito-container {

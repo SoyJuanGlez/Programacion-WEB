@@ -25,12 +25,19 @@ function renderizarCarrito() {
         let total = 0;
         html += `<ul style="list-style:none;padding:0;">`;
         carrito.forEach((item, idx) => {
-            // Extrae el número del precio (quita $ y comas)
             const precioNum = Number(item.precio.replace(/[^0-9.-]+/g,""));
-            total += precioNum;
-            html += `<li style="margin-bottom:1rem;">
-                <img src="${item.img}" alt="${item.nombre}" style="width:40px;height:40px;object-fit:cover;vertical-align:middle;border-radius:8px;">
-                <span style="margin-left:1rem;">${item.nombre} - ${item.precio}</span>
+            total += precioNum * item.cantidad;
+            // Ajuste especial para la imagen del producto 2
+            let imgStyle = "width:40px;height:40px;object-fit:cover;vertical-align:middle;border-radius:8px;";
+            if(item.nombre === "Freddy Krueger") {
+                imgStyle = "width:48px;height:40px;object-fit:contain;vertical-align:middle;background:#fff;border-radius:8px;padding:2px;";
+            }
+            html += `<li style="margin-bottom:1rem;display:flex;align-items:center;">
+                <img src="${item.img}" alt="${item.nombre}" style="${imgStyle}">
+                <span style="margin-left:1rem;flex:1;">${item.nombre} - ${item.precio}</span>
+                <button class="disminuir-cantidad" data-idx="${idx}" style="margin:0 5px;background:#eee;border:none;border-radius:4px;padding:2px 8px;cursor:pointer;font-weight:bold;">-</button>
+                <span style="min-width:24px;text-align:center;">${item.cantidad}</span>
+                <button class="aumentar-cantidad" data-idx="${idx}" style="margin:0 5px;background:#eee;border:none;border-radius:4px;padding:2px 8px;cursor:pointer;font-weight:bold;">+</button>
                 <button data-idx="${idx}" class="eliminar-producto" style="margin-left:1rem;background:#ff5252;color:#fff;border:none;border-radius:4px;padding:2px 8px;cursor:pointer;">Eliminar</button>
             </li>`;
         });
@@ -40,6 +47,8 @@ function renderizarCarrito() {
     }
     carritoContenido.innerHTML = html;
     document.getElementById('cerrar-carrito').onclick = () => carritoModal.style.display = 'none';
+
+    // Eliminar producto
     document.querySelectorAll('.eliminar-producto').forEach(btn => {
         btn.onclick = (e) => {
             const idx = e.target.getAttribute('data-idx');
@@ -48,11 +57,37 @@ function renderizarCarrito() {
             renderizarCarrito();
         };
     });
+
+    // Aumentar cantidad
+    document.querySelectorAll('.aumentar-cantidad').forEach(btn => {
+        btn.onclick = (e) => {
+            const idx = e.target.getAttribute('data-idx');
+            carrito[idx].cantidad += 1;
+            actualizarContador();
+            renderizarCarrito();
+        };
+    });
+
+    // Disminuir cantidad
+    document.querySelectorAll('.disminuir-cantidad').forEach(btn => {
+        btn.onclick = (e) => {
+            const idx = e.target.getAttribute('data-idx');
+            if (carrito[idx].cantidad > 1) {
+                carrito[idx].cantidad -= 1;
+            } else {
+                carrito.splice(idx, 1);
+            }
+            actualizarContador();
+            renderizarCarrito();
+        };
+    });
 }
 
 // Actualiza el contador del carrito
 function actualizarContador() {
-    carritoContador.textContent = carrito.length;
+    // Suma todas las cantidades
+    const totalCantidad = carrito.reduce((acc, item) => acc + item.cantidad, 0);
+    carritoContador.textContent = totalCantidad;
 }
 
 // Agrega botón a cada producto y funcionalidad
@@ -67,7 +102,13 @@ productos.forEach(producto => {
         const img = producto.querySelector('img').getAttribute('src');
         const nombre = producto.querySelector('h3').textContent;
         const precio = producto.querySelector('span').textContent;
-        carrito.push({ img, nombre, precio });
+        // Busca si ya existe el producto en el carrito
+        const existente = carrito.find(item => item.nombre === nombre && item.precio === precio);
+        if (existente) {
+            existente.cantidad += 1;
+        } else {
+            carrito.push({ img, nombre, precio, cantidad: 1 });
+        }
         actualizarContador();
         renderizarCarrito();
     };
