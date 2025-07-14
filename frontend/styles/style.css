@@ -324,7 +324,7 @@ h1,h2,h3{
 .seccion-hombre {
     margin-top: 45px;
     height: 400px;
-    background-image: url(/frontend/img/section-men.jpg);
+    background-image: url(/ProyectoWEB/frontend/img/section-men.jpg);
     background-position: center;
     transition: transform 0.6s ease, box-shadow 0.6s ease;
     display: block;
@@ -350,7 +350,7 @@ h1,h2,h3{
 .seccion-mujer {
     margin-top: 45px;
     height: 400px;
-    background-image: url(/frontend/img/section_woman.jpg);
+    background-image: url(/ProyectoWEB/frontend/img/section_woman.jpg);
     background-position: center;
     transition: transform 0.6s ease, box-shadow 0.6s ease;
     display: block;
