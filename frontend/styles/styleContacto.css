@@ -1,0 +1,131 @@
+.imagen{
+    background-image: url(https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_1920,w_1920/statement_pdp_home_men_d_7a60fcc7a1.jpg); /* Cambiado a Fondo.png */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-width: 100vw;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.contenedor-tabla {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+/* Contactos */
+
+.contendor-divs {
+    padding: 40px;
+}
+
+.div-fila1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.div-fila2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.div-fila3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#contenedor-redes {
+    border: none;
+    border-radius: 12px;
+    padding: 20px;
+    background-color: #757575;
+    margin-top: 40px;
+}
+
+.divs-contacto h4,
+.divs-contacto h5,
+.divs-contacto h6,
+.divs-social h4,
+.divs-social h5,
+.divs-social h6,
+.div-redes h4,
+.div-redes h6 {
+    margin: 6px;
+}
+
+.divs-contacto {
+    text-align: center;
+    border: 1px solid white;
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+    padding: 18px;
+    padding-inline: 35px;
+}
+
+.divs-social {
+    text-align: center;
+    border: 1px solid #757575;
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+    padding: 18px;
+    padding-inline: 35px;
+    color: white;
+}
+
+.divs-contacto:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 
+        0 12px 24px rgba(0, 0, 0, 0.2), 
+        0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.divs-social:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 
+        0 12px 24px rgba(255, 255, 255, 0.2), 
+        0 4px 8px rgba(255, 255, 255, 0.1);
+    z-index: 10;
+}
+
+.div-redes {
+    text-align: center;
+    border: 1px solid #757575;
+    padding: 10px;
+    padding-inline: 35px;
+    color: white;
+}
+
+h4 {
+    font-size: 25px;
+}
+
+.divs-contacto h6 {
+    font-size: 16px;
+    color: rgb(129, 131, 133); 
+}
+
+.divs-social h6 {
+    font-size: 16px;
+    color: rgb(206, 213, 220); 
+}
+
+.div-redes h6 {
+    font-size: 16px;
+    color: rgb(206, 213, 220); 
+}
+
+h5 {
+    font-size: 20px;
+}

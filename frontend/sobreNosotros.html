@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros | PopaShoes</title>
+
+    <link rel="preload" href="/frontend/styles/style.css" as="style">
+    <link rel="stylesheet" href="/frontend/styles/style.css">
+
+    <link rel="stylesheet" href="/frontend/js/Funcionalidad.js">
+    <script src="/frontend/js/Funcionalidad.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="/frontend/img/logo_color.png">
+</head>
+<body>
+        <!-- Carrito de compras -->
+    <div class="carrito-container">
+        <button id="carrito-btn">
+            <img src="https://img.icons8.com/ios-filled/50/000000/shopping-cart.png" alt="Carrito" class="carrito-icon">
+            <span id="carrito-contador">0</span>
+        </button>
+        <div id="carrito-modal" class="carrito-modal">
+            <div class="carrito-modal-content">
+                <span class="cerrar-modal" id="cerrar-carrito">&times;</span>
+                <h2>Tu Carrito</h2>
+                <p>Aún no tienes productos en tu carrito.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Carrito de compras -->
+
+    <header>
+        <a href="/frontend/Proyecto.html" style="cursor: pointer;"><img src="/frontend/img/logo_color.png" alt="" id="logo-popas"></a>
+        <h1 class="titulo">PopaShoes <span>Tu tienda de Sneakers Favorita</span></h1>
+    </header>
+
+    <!--Barra de navegacion-->
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="#">Inicio</a>
+            <a href="#">Productos</a>
+            <a href="#">Hombre</a>
+            <a href="#">Mujer</a>
+        </nav>
+    </div>
+
+    <section class="imagen">
+        <div class ="contenido-imagen">
+            <h2>Somos un equipo que busca ofrecer sneakers únicos para cada persona.</h2>
+        </div>
+    </section>
+
+    
+
+    <footer>
+        <div class="footer-arriba">
+            <img src="/frontend/img/Logo.png" alt="" id="logo-footer">
+            <h4>PopaShoes</h4>
+            <div class="ubicacion">
+                <p>
+                    Tepic, Nayarit, México
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" stroke-width="2">
+                        <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+                        <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
+                    </svg>
+                </p>
+            </div>
+        </div>
+
+
+
+        <hr class="footer-hr">
+
+        <div id="footer-botones">
+            <a href="/frontend/contacto.html">Contacto</a>
+            <a href="#">Sobre Nosotros</a>
+        </div>
+
+        <p class="footer-popa">© 2025 PopaShoes México S.A. de C.V.</p>
+    </footer>
+</body>
+</html>

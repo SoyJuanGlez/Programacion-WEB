@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PopaShoes</title>
 
-    <link rel="preload" href="style.css" as="style">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="/frontend/styles/style.css" as="style">
+    <link rel="stylesheet" href="/frontend/styles/style.css">
 
-    <link rel="stylesheet" href="Funcionalidad.js">
-    <script src="Funcionalidad.js" defer></script>
-    
+    <link rel="stylesheet" href="/frontend/js/Funcionalidad.js">
+    <script src="/frontend/js/Funcionalidad.js" defer></script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+    <link rel="icon" href="/frontend/img/logo_color.png">
 </head>
+
 <body>
     <!-- Carrito de compras -->
     <div class="carrito-container">
@@ -35,6 +36,7 @@
     <!-- Fin Carrito de compras -->
 
     <header>
+        <a href="#" style="cursor: pointer;"><img src="/frontend/img/logo_color.png" alt="" id="logo-popas"></a>
         <h1 class="titulo">PopaShoes <span>Tu tienda de Sneakers Favorita</span></h1>
     </header>
 
@@ -43,23 +45,14 @@
         <nav class="navegacion-principal contenedor">
             <a href="#">Inicio</a>
             <a href="#">Productos</a>
-            <a href="#">Sobre Nosotros</a>
-            <a href="#">Contacto</a>
+            <a href="#">Hombres</a>
+            <a href="#">Mujeres</a>
         </nav>
     </div>
 
     <section class="imagen">
         <div class ="contenido-imagen">
             <h2>Sneakers Exclusivos para Todos</h2>
-            
-            <div class="ubicacion">
-                <p>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="48" height="48" stroke-width="2">
-                        <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
-                        <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
-                    </svg>
-                    Tepic, Nayarit</p>
-            </div>
 
             <a class="boton" href="#">Ver Sneakers</a>
         </div>
@@ -95,5 +88,50 @@
                 </div>
         </div>
     </section>
+
+    <section>
+        <div class="contenedor">
+            <div class="seccion-hombre">
+                <div id="titulo-h">
+                    HOMBRES
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="contenedor">
+            <div class="seccion-mujer">
+                <div id="titulo-m">
+                    MUJERES
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-arriba">
+            <img src="/frontend/img/Logo.png" alt="" id="logo-footer">
+            <h4>PopaShoes</h4>
+            <div class="ubicacion">
+                <p>
+                    Tepic, Nayarit, México
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" stroke-width="2">
+                        <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+                        <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
+                    </svg>
+                </p>
+            </div>
+        </div>
+
+        <hr class="footer-hr">
+
+        <div id="footer-botones">
+            <a href="/frontend/contacto.html">Contacto</a>
+            <a href="/frontend/sobreNosotros.html">Sobre Nosotros</a>
+        </div>
+
+        <p class="footer-popa">© 2025 PopaShoes México S.A. de C.V.</p>
+    </footer>
 </body> 
 </html>

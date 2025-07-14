@@ -7,6 +7,12 @@
 }
 
 /* GLOBALES */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 html{
     font-size: 62.5%;
     box-sizing: border-box;
@@ -39,6 +45,7 @@ body{
     width: 90%;
     text-align: center;
 }
+
 @media (min-width: 768px) {
     .boton{
         width: auto;
@@ -118,9 +125,16 @@ h1,h2,h3{
     color: var(--blanco);
 }
 
+#logo-popas {
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 /*IMAGEN */
 .imagen{
-    background-image: url(img/Fondo.jpg); /* Cambiado a Fondo.png */
+    background-image: url(../img/Fondo.jpg); /* Cambiado a Fondo.png */
     background-repeat: no-repeat;
     background-size: cover;
     height: 450px;
@@ -303,3 +317,128 @@ h1,h2,h3{
     font-weight: bold;
 }
 
+
+/* SECCIONES */
+
+/* HOMBRE*/
+.seccion-hombre {
+    margin-top: 45px;
+    height: 400px;
+    background-image: url(/frontend/img/section-men.jpg);
+    background-position: center;
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+    display: block;
+    cursor: pointer;
+}
+
+.seccion-hombre:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 
+        0 12px 24px rgba(0, 0, 0, 0.2), 
+        0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+#titulo-h {
+    color: #0097A7;
+    font-weight: bold;
+    font-size: 70px;
+    padding: 20px 0px 0px 20px;
+}
+
+/* MUJER */
+.seccion-mujer {
+    margin-top: 45px;
+    height: 400px;
+    background-image: url(/frontend/img/section_woman.jpg);
+    background-position: center;
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+    display: block;
+    cursor: pointer;
+}
+
+.seccion-mujer:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 
+        0 12px 24px rgba(0, 0, 0, 0.2), 
+        0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+#titulo-m {
+    color: #FFc107;
+    font-weight: bold;
+    font-size: 70px;
+    padding: 20px 0px 0px 20px;
+}
+
+/* FOOTER */
+
+footer {
+    color: #fff;
+    background-color: var(--oscuro);
+    width: 100%;
+    padding: 5px 20px 10px 20px;
+    margin-top: 45px;
+}
+
+.footer-arriba {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+#logo-footer {
+    height: 70px;
+}
+
+.footer-arriba h4 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+}
+
+.footer-top .ubicacion p {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+}
+
+.footer-hr {
+    border: none;
+    height: 2px;
+    background-color: rgba(232, 219, 219, 0.1);
+    margin-bottom: 25px;
+}
+
+#footer-botones {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+footer a {
+    opacity: 0.5;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 10px 15px;
+    color: #fff;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    font-size: 1.6rem;
+}
+
+footer a:hover {
+    opacity: 1;
+    color: var(--primario);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.footer-popa {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-top: 2rem;
+}
