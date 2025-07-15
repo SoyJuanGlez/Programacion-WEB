@@ -80,7 +80,309 @@ h1,h2,h3{
     font-size: 2rem;
 }
 
-/* NAVEGACION PRINCIPAL */
+/* HEADER ESTILO ADIDAS */
+.header-adidas {
+    background-color: var(--blanco);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-top {
+    border-bottom: 1px solid #e5e5e5;
+    padding: 1rem 0;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-left {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo-link {
+    text-decoration: none;
+}
+
+#logo-popas {
+    height: 50px;
+    width: auto;
+    transition: opacity 0.3s ease;
+}
+
+#logo-popas:hover {
+    opacity: 0.8;
+}
+
+.brand-title-small {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.brand-title-small .titulo {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--oscuro);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, var(--secundario) 0%, var(--primario) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+}
+
+.subtitulo {
+    font-size: 1.1rem;
+    color: var(--gris);
+    font-weight: 400;
+    margin-top: 0.2rem;
+    text-transform: none;
+    letter-spacing: 0.3px;
+    line-height: 1;
+}
+
+.header-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin: 0 2rem;
+}
+
+.nav-principal {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--oscuro);
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--secundario);
+    background-color: rgba(0, 151, 167, 0.1);
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--secundario);
+}
+
+.header-right {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 0.8rem 1.2rem;
+    border: 2px solid #e5e5e5;
+    border-radius: 25px;
+    font-size: 1.4rem;
+    width: 250px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: var(--secundario);
+    box-shadow: 0 0 0 3px rgba(0, 151, 167, 0.1);
+}
+
+.search-btn {
+    position: absolute;
+    right: 5px;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: rgba(0, 151, 167, 0.1);
+}
+
+.user-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.user-btn,
+.carrito-btn {
+    background: none;
+    border: none;
+    padding: 0.8rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.user-btn:hover,
+.carrito-btn:hover {
+    background-color: rgba(0, 151, 167, 0.1);
+    color: var(--secundario);
+}
+
+.carrito-btn {
+    position: relative;
+}
+
+#carrito-contador {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--primario);
+    color: var(--oscuro);
+    border-radius: 50%;
+    padding: 0.2rem 0.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    min-width: 1.8rem;
+    height: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(25%, -25%);
+    border: 2px solid var(--blanco);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .header-left {
+        gap: 1rem;
+    }
+    
+    .brand-title-small .titulo {
+        font-size: 2rem;
+    }
+    
+    .subtitulo {
+        font-size: 1rem;
+    }
+    
+    .header-center {
+        margin: 0;
+    }
+    
+    .nav-principal {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-link {
+        font-size: 1.4rem;
+    }
+    
+    .search-input {
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container {
+        padding: 0 1rem;
+    }
+    
+    .header-left {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .brand-title-small .titulo {
+        font-size: 1.8rem;
+    }
+    
+    .subtitulo {
+        font-size: 0.9rem;
+    }
+    
+    .nav-principal {
+        gap: 1rem;
+    }
+    
+    .nav-link {
+        font-size: 1.2rem;
+        padding: 0.3rem 0.8rem;
+    }
+    
+    .search-input {
+        width: 150px;
+    }
+    
+    .user-actions {
+        gap: 0.5rem;
+    }
+    
+    .user-btn,
+    .carrito-btn {
+        padding: 0.6rem;
+    }
+    
+    #carrito-contador {
+        font-size: 1rem;
+        min-width: 1.6rem;
+        height: 1.6rem;
+        padding: 0.1rem 0.4rem;
+    }
+    
+    .carrito-modal-content {
+        min-width: 300px;
+        max-width: 90vw;
+        padding: 1.5rem 2rem;
+    }
+}
+
+/* NAVEGACION PRINCIPAL*/
+/* 
 .nav-bg{
     background-color: var(--gris);
     width: 100vw;
@@ -118,19 +420,12 @@ h1,h2,h3{
     font-weight: 700;
     padding: 1rem;
 }
-                /*hover es para un evento por ejemplo en este caso lo que hace es al poner 
-                el cursor en la barra de navegacion cambia el color de la letra y fondo  */
+
 .navegacion-principal a:hover {
     background-color: var(--secundario);
     color: var(--blanco);
 }
-
-#logo-popas {
-    height: 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
+*/
 
 /*IMAGEN */
 .imagen{
@@ -257,42 +552,11 @@ h1,h2,h3{
     cursor: pointer;
 }
 
-.carrito-container {
-    position: fixed;
-    top: 2rem;
-    right: 2rem;
-    z-index: 1000;
-}
-
-#carrito-btn {
-    background: none;
-    border: none;
-    position: relative;
-    cursor: pointer;
-}
-
-.carrito-icon {
-    width: 36px;
-    height: 36px;
-}
-
-#carrito-contador {
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    background: var(--primario);
-    color: var(--oscuro);
-    border-radius: 50%;
-    padding: 2px 7px;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
 .carrito-modal {
     display: none;
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.5);
     z-index: 2000;
     justify-content: center;
     align-items: center;
@@ -302,9 +566,13 @@ h1,h2,h3{
     background: #fff;
     padding: 2rem 3rem;
     border-radius: 1rem;
-    min-width: 300px;
+    min-width: 400px;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
     position: relative;
     text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .cerrar-modal {
@@ -315,6 +583,84 @@ h1,h2,h3{
     color: var(--gris);
     cursor: pointer;
     font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.cerrar-modal:hover {
+    color: var(--oscuro);
+}
+
+/* Estilos para el contenido del carrito */
+.carrito-modal-content h2 {
+    color: var(--oscuro);
+    margin-bottom: 1.5rem;
+    font-size: 2.4rem;
+}
+
+.carrito-modal-content ul {
+    text-align: left;
+    margin: 1.5rem 0;
+}
+
+.carrito-modal-content li {
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.carrito-modal-content li:last-child {
+    border-bottom: none;
+}
+
+.carrito-modal-content .eliminar-producto {
+    background: #ff5252;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.carrito-modal-content .eliminar-producto:hover {
+    background: #d32f2f;
+}
+
+.carrito-modal-content .aumentar-cantidad,
+.carrito-modal-content .disminuir-cantidad {
+    background: #f0f0f0;
+    border: none;
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.carrito-modal-content .aumentar-cantidad:hover,
+.carrito-modal-content .disminuir-cantidad:hover {
+    background: #e0e0e0;
+}
+
+.carrito-modal-content .boton {
+    background: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.carrito-modal-content .boton:hover {
+    background: var(--primario);
+    color: var(--oscuro);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 

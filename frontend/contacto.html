@@ -19,36 +19,67 @@
     <link rel="icon" href="/ProyectoWEB/frontend/img/logo_color.png">
 </head>
 <body>
-        <!-- Carrito de compras -->
-    <div class="carrito-container">
-        <button id="carrito-btn">
-            <img src="https://img.icons8.com/ios-filled/50/000000/shopping-cart.png" alt="Carrito" class="carrito-icon">
-            <span id="carrito-contador">0</span>
-        </button>
-        <div id="carrito-modal" class="carrito-modal">
-            <div class="carrito-modal-content">
-                <span class="cerrar-modal" id="cerrar-carrito">&times;</span>
-                <h2>Tu Carrito</h2>
-                <p>Aún no tienes productos en tu carrito.</p>
+    <header class="header-adidas">
+        <div class="header-top">
+            <div class="header-container">
+                <div class="header-left">
+                    <a href="/ProyectoWEB/frontend/Proyecto.html" class="logo-link">
+                        <img src="/ProyectoWEB/frontend/img/logo_color.png" alt="PopaShoes" id="logo-popas">
+                    </a>
+                    <div class="brand-title-small">
+                        <h1 class="titulo">PopaShoes</h1>
+                        <span class="subtitulo">Tu tienda de Sneakers Favorita</span>
+                    </div>
+                </div>
+                <div class="header-center">
+                    <nav class="nav-principal">
+                        <a href="/ProyectoWEB/frontend/Proyecto.html" class="nav-link">Inicio</a>
+                        <a href="#" class="nav-link">Hombres</a>
+                        <a href="#" class="nav-link">Mujeres</a>
+                        <a href="#" class="nav-link">Niños</a>
+                        <a href="#" class="nav-link">Ofertas</a>
+                    </nav>
+                </div>
+                <div class="header-right">
+                    <div class="search-container">
+                        <input type="text" placeholder="Buscar productos..." class="search-input">
+                        <button class="search-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="user-actions">
+                        <button class="user-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </button>
+                        <button id="carrito-btn" class="carrito-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 22c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM20 22c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM1 2h4.27l.94 2H20l-3.64 7.14"></path>
+                                <path d="M7.68 13.27L6.4 11H1"></path>
+                            </svg>
+                            <span id="carrito-contador">0</span>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Fin Carrito de compras -->
-
-    <header>
-        <a href="/ProyectoWEB/frontend/Proyecto.html" style="cursor: pointer;"><img src="/ProyectoWEB/frontend/img/logo_color.png" alt="" id="logo-popas"></a>
-        <h1 class="titulo">PopaShoes <span>Tu tienda de Sneakers Favorita</span></h1>
     </header>
 
-    <!--Barra de navegacion-->
-    <div class="nav-bg">
-        <nav class="navegacion-principal contenedor">
-            <a href="#">Inicio</a>
-            <a href="#">Productos</a>
-            <a href="#">Hombre</a>
-            <a href="#">Mujer</a>
-        </nav>
+    <!-- Modal del carrito -->
+    <div id="carrito-modal" class="carrito-modal">
+        <div class="carrito-modal-content">
+            <span class="cerrar-modal" id="cerrar-carrito">&times;</span>
+            <h2>Tu Carrito</h2>
+            <p>Aún no tienes productos en tu carrito.</p>
+        </div>
     </div>
+
+    <!--Barra de navegacion removida - ahora integrada en header-->
 
     <section class="imagen">
         <div class ="contenido-imagen">
@@ -130,7 +161,7 @@
         <hr class="footer-hr">
 
         <div id="footer-botones">
-            <a href="#">Contacto</a>
+            <a href="/ProyectoWEB/frontend/contacto.html">Contacto</a>
             <a href="/ProyectoWEB/frontend/sobreNosotros.html">Sobre Nosotros</a>
         </div>
 
