@@ -1,6 +1,6 @@
+const path = require('path');
 const express = require('express');
 const mongoose = require('mongoose');
-const path = require('path');
 
 const app = express();
 const PORT = 3000;
@@ -17,7 +17,7 @@ mongoose.connect('mongodb://localhost:27017/tienda', {
 app.use(express.json());
 
 // Servir archivos estáticos (html, css, js, imágenes)
-app.use(express.static(path.join(__dirname)));
+app.use(express.static(path.join(__dirname, '../frontend')));
 
 // Ejemplo de esquema y modelo para usuarios
 const UsuarioSchema = new mongoose.Schema({
@@ -41,7 +41,7 @@ app.post('/api/usuarios', async (req, res) => {
 
 // Ruta principal (opcional, sirve Proyecto.html)
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'Proyecto.html'));
+  res.sendFile(path.join(__dirname, '../frontend/Proyecto.html'));
 });
 
 // Iniciar el servidor
