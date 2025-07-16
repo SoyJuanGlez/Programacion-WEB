@@ -1,108 +1,340 @@
-body {
-    background: #f7f7f7;
+/* ESTILOS ESPECÍFICOS PARA PÁGINA DE PAGO */
+
+/* Carrito deshabilitado en página de pago */
+.carrito-btn.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
 }
 
+.carrito-btn.disabled:hover {
+    background-color: transparent;
+    color: inherit;
+}
+
+/* Breadcrumb */
+.pago-breadcrumb {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 2rem 0;
+    margin-bottom: 3rem;
+}
+
+.breadcrumb-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--secundario);
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.breadcrumb-link:hover {
+    color: var(--primario);
+    transform: translateX(-3px);
+}
+
+.breadcrumb-title h2 {
+    font-size: 3.2rem;
+    color: var(--oscuro);
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+.breadcrumb-title p {
+    color: var(--gris);
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+/* Contenedor principal */
 .pago-contenedor {
-    max-width: 900px;
-    margin: 3rem auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 4rem;
+    align-items: start;
+    margin-bottom: 5rem;
+}
+
+/* Formulario de pago */
+.formulario-pago {
     background: #fff;
-    border-radius: 1rem;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    border-radius: 1.5rem;
     padding: 3rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f0f0f0;
+}
+
+.seccion-form {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.seccion-form:last-of-type {
+    border-bottom: none;
+    margin-bottom: 2rem;
+}
+
+.seccion-form h3 {
     display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    align-items: flex-start;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2.2rem;
+    color: var(--oscuro);
+    margin-bottom: 2rem;
+    font-weight: 700;
 }
 
-.formulario-pago, .resumen-pedido {
-    flex: 1 1 320px;
-}
-
-.formulario-pago h2, .resumen-pedido h2 {
-    margin-bottom: 1.5rem;
+.seccion-form h3 svg {
     color: var(--secundario);
 }
 
-.formulario-pago label {
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.form-group label {
     display: block;
-    margin-bottom: .5rem;
-    font-weight: bold;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    color: var(--oscuro);
+    font-size: 1.4rem;
 }
 
-.formulario-pago input, .formulario-pago select {
+.form-group input,
+.form-group select {
     width: 100%;
-    padding: .8rem;
-    margin-bottom: 1.5rem;
-    border: 1px solid #ccc;
-    border-radius: .5rem;
-    font-size: 1.6rem;
-    background: #f9f9f9;
-    transition: border-color 0.2s;
-}
-.formulario-pago input:focus {
-    border-color: var(--secundario);
-    outline: none;
-}
-
-.resumen-pedido {
-    background: #fafafa;
+    padding: 1.2rem 1.5rem;
+    border: 2px solid #e5e5e5;
     border-radius: 1rem;
-    padding: 2rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    height: fit-content;
-    min-width: 260px;
+    font-size: 1.4rem;
+    background: #fafafa;
+    transition: all 0.3s ease;
+    font-family: inherit;
 }
 
-.resumen-pedido ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 1.5rem 0;
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--secundario);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(0, 151, 167, 0.1);
 }
 
-.resumen-pedido li {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: space-between;
+.form-group input::placeholder {
+    color: #999;
 }
 
-.resumen-pedido .total {
-    font-weight: bold;
-    font-size: 1.7rem;
-    margin-top: 1.5rem;
-    text-align: right;
-}
-
+/* Botón de pago */
 .boton-pago {
     width: 100%;
-    margin-top: 2rem;
-    font-size: 2rem;
-}
-
-.regresar-link {
-    display: inline-block;
-    color: var(--secundario);
-    background: none;
+    background: linear-gradient(135deg, var(--secundario) 0%, var(--primario) 100%);
+    color: var(--blanco);
+    padding: 1.5rem 2rem;
+    font-size: 1.8rem;
+    font-weight: 700;
     border: none;
-    font-size: 1.4rem;
-    margin-bottom: 1.5rem;
-    text-decoration: underline;
+    border-radius: 1rem;
     cursor: pointer;
-    transition: color 0.2s;
-}
-.regresar-link:hover {
-    color: var(--primario);
-    text-decoration: none;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 151, 167, 0.3);
 }
 
-@media (max-width: 800px) {
+.boton-pago:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 151, 167, 0.4);
+}
+
+/* Resumen del pedido */
+.resumen-pedido {
+    background: #fff;
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f0f0f0;
+    position: sticky;
+    top: 10rem;
+    height: fit-content;
+}
+
+.resumen-pedido h3 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2rem;
+    color: var(--oscuro);
+    margin-bottom: 2rem;
+    font-weight: 700;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 1rem;
+}
+
+.resumen-pedido h3 svg {
+    color: var(--secundario);
+}
+
+.productos-pedido {
+    margin-bottom: 2rem;
+}
+
+.producto-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.producto-item:last-child {
+    border-bottom: none;
+}
+
+.producto-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 0.8rem;
+    background: #f8f9fa;
+    padding: 0.5rem;
+}
+
+.producto-info {
+    flex: 1;
+}
+
+.producto-info h4 {
+    font-size: 1.4rem;
+    color: var(--oscuro);
+    margin: 0 0 0.5rem 0;
+    font-weight: 600;
+}
+
+.producto-info p {
+    font-size: 1.2rem;
+    color: var(--gris);
+    margin: 0 0 0.5rem 0;
+}
+
+.producto-info .precio {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--secundario);
+}
+
+.calculos {
+    border-top: 2px solid #f0f0f0;
+    padding-top: 1.5rem;
+}
+
+.linea-calculo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.linea-calculo span:first-child {
+    color: var(--gris);
+}
+
+.linea-calculo span:last-child {
+    font-weight: 600;
+    color: var(--oscuro);
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--oscuro);
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--secundario);
+}
+
+.total span:last-child {
+    color: var(--secundario);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
     .pago-contenedor {
-        flex-direction: column;
-        padding: 2rem 1rem;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1rem;
     }
+    
+    .formulario-pago,
     .resumen-pedido {
-        min-width: unset;
-        margin-top: 2rem;
+        padding: 2rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .breadcrumb-title h2 {
+        font-size: 2.4rem;
+    }
+    
+    .breadcrumb-title p {
+        font-size: 1.4rem;
+    }
+    
+    .resumen-pedido {
+        position: static;
+        order: -1;
+    }
+    
+    .producto-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .producto-item img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pago-breadcrumb {
+        padding: 1.5rem 0;
+    }
+    
+    .formulario-pago,
+    .resumen-pedido {
+        padding: 1.5rem;
+    }
+    
+    .seccion-form h3 {
+        font-size: 1.8rem;
+    }
+    
+    .boton-pago {
+        font-size: 1.6rem;
+        padding: 1.2rem 1.5rem;
     }
 }
