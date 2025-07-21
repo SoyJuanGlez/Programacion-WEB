@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PopaShoes</title>
 
-    <link rel="preload" href="/ProyectoWEB/frontend/styles/style.css" as="style">
-    <link rel="stylesheet" href="/ProyectoWEB/frontend/styles/style.css">
+    <link rel="preload" href="./styles/style.css" as="style">
+    <link rel="stylesheet" href="./styles/style.css">
 
-    <link rel="stylesheet" href="/ProyectoWEB/frontend/js/Funcionalidad.js">
-    <script src="/ProyectoWEB/frontend/js/Funcionalidad.js" defer></script>
+    <link rel="stylesheet" href="./js/Funcionalidad.js">
+    <script src="./js/Funcionalidad.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <link rel="icon" href="/ProyectoWEB/frontend/img/logo_color.png">
+    <link rel="icon" href="./img/logo_color.png">
 </head>
 
 <body>
@@ -24,7 +24,7 @@
             <div class="header-container">
                 <div class="header-left">
                     <a href="#" class="logo-link">
-                        <img src="/ProyectoWEB/frontend/img/logo_color.png" alt="PopaShoes" id="logo-popas">
+                        <img src="./img/logo_color.png" alt="PopaShoes" id="logo-popas">
                     </a>
                     <div class="brand-title-small">
                         <h1 class="titulo">PopaShoes</h1>
@@ -34,10 +34,8 @@
                 <div class="header-center">
                     <nav class="nav-principal">
                         <a href="#" class="nav-link active">Inicio</a>
-                        <a href="#" class="nav-link">Hombres</a>
+                        <a href="./seccionHombres.html" class="nav-link">Hombres</a>
                         <a href="#" class="nav-link">Mujeres</a>
-                        <a href="#" class="nav-link">Niños</a>
-                        <a href="#" class="nav-link">Ofertas</a>
                     </nav>
                 </div>
                 <div class="header-right">
@@ -94,25 +92,25 @@
             <h2 class="titulo-seccion">Productos Destacados</h2>
             <div class="productos">
                 <div class="producto">
-                    <img src="img/Dior.png" alt="Sneaker 1" style="object-fit: contain;">
+                    <img src="./img/Dior.png" alt="Sneaker 1" style="object-fit: contain;">
                     <h3>Jordan 1 Dior</h3>
                     <p>Jordan 1 Low Dior.</p>
                     <span>$120,000.00</span>
                 </div>
                 <div class="producto">
-                    <img src="img/dunk_freddykrueger.png" alt="Sneaker 2" style="object-fit: contain;" >
+                    <img src="./img/dunk_freddykrueger.png" alt="Sneaker 2" style="object-fit: contain;" >
                     <h3>Dunk Freddy Krueger</h3>
                     <p>Dunk Low Freddy Krueger.</p>
                     <span>$1,200,000.00</span>
                 </div>
                 <div class="producto">
-                    <img src="img/Jordan_1_Travis_Frafment.png" alt="Sneaker 3" style="object-fit: contain;">
+                    <img src="./img/Jordan_1_Travis_Frafment.png" alt="Sneaker 3" style="object-fit: contain;">
                     <h3> Jordan 1 Travis Scott x Fragment</h3>
                     <p>Jordan 1 Travis Scott x Fragment.</p>
                     <span>$32,499.00</span>
                 </div>
                 <div class="producto">
-                    <img src="img/Jordan 1 Off-White Chicago.png" alt="Sneaker 4" style="object-fit: contain;">
+                    <img src="./img/Jordan 1 Off-White Chicago.png" alt="Sneaker 4" style="object-fit: contain;">
                     <h3>Jordan 1 Chicago</h3>
                     <p>Jordan 1 Off-White Chicago Retro</p>
                     <span>$75,000.00</span>
@@ -122,11 +120,13 @@
 
     <section>
         <div class="contenedor">
-            <div class="seccion-hombre">
-                <div id="titulo-h">
-                    HOMBRES
+            <a href="./seccionHombres.html" style="text-decoration: none;">
+                <div class="seccion-hombre">
+                    <div id="titulo-h">
+                        HOMBRES
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
     </section>
 
@@ -142,7 +142,7 @@
 
     <footer>
         <div class="footer-arriba">
-            <img src="/ProyectoWEB/frontend/img/Logo.png" alt="" id="logo-footer">
+            <img src="./img/Logo.png" alt="" id="logo-footer">
             <h4>PopaShoes</h4>
             <div class="ubicacion">
                 <p>
@@ -158,8 +158,8 @@
         <hr class="footer-hr">
 
         <div id="footer-botones">
-            <a href="/ProyectoWEB/frontend/contacto.html">Contacto</a>
-            <a href="/ProyectoWEB/frontend/sobreNosotros.html">Sobre Nosotros</a>
+            <a href="./contacto.html">Contacto</a>
+            <a href="./sobreNosotros.html">Sobre Nosotros</a>
         </div>
 
         <p class="footer-popa">© 2025 PopaShoes México S.A. de C.V.</p>

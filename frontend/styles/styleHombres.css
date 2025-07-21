@@ -1,0 +1,40 @@
+/* CONTENEDOR PRINCIPAL */
+.contenedor-productos {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding: 30px;
+}
+
+/* CONTENEDOR FILTROS - IZQ*/
+
+.contenedor-filtros {
+    border: 1px solid blue;
+    width: 300px;
+    margin-right: 15px;
+}
+
+/* CONTENEDOR TENIS - DER*/
+
+.contenedor-tenis {
+    width: 100%;
+    border: 1px solid greenyellow;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+}
+
+img {
+    height: 150px;
+    width: auto;
+}
+
+/* Contenedor Tenis */
+
+.tenis {
+    width: 330px;
+    height: 330px;
+    border: 1px solid orangered;
+    margin: 10px;
+    text-align: center;
+}

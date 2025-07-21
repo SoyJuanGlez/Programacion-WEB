@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nosotros | PopaShoes</title>
+    <title>Hombres | PopaShoes</title>
 
     <link rel="preload" href="./styles/style.css" as="style">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/styleHombres.css">
 
     <link rel="stylesheet" href="./js/Funcionalidad.js">
     <script src="./js/Funcionalidad.js" defer></script>
@@ -32,8 +33,8 @@
                 </div>
                 <div class="header-center">
                     <nav class="nav-principal">
-                        <a href="./Proyecto.html" class="nav-link">Inicio</a>
-                        <a href="./seccionHombres.html" class="nav-link">Hombres</a>
+                        <a href="./Proyecto.html" class="nav-link active">Inicio</a>
+                        <a href="#" class="nav-link">Hombres</a>
                         <a href="#" class="nav-link">Mujeres</a>
                     </nav>
                 </div>
@@ -80,11 +81,100 @@
 
     <section class="imagen">
         <div class ="contenido-imagen">
-            <h2>Somos un equipo que busca ofrecer sneakers únicos para cada persona.</h2>
+            <h2>Sneakers Exclusivos para Todos</h2>
         </div>
     </section>
 
-    
+    <section>
+        <div class="contenedor-productos">
+            <div class="contenedor-filtros">
+                <div class="contenedor-ordenar">
+                    <form action="">
+                        <select name="" id="">
+                            <option value="" disabled selected hidden>
+                                Ordenar por
+                            </option>
+                            <option value="">
+                                Precio (de Menor a Mayor)
+                            </option>
+                            <option value="">
+                                Precio (de Mayor a Menor)
+                            </option>
+                        </select>
+                        <input type="reset" value="Limpiar">
+                    </form>
+                </div>
+
+                <div class="contenedor-filtrar">
+                    <div class="checkbox-precios">
+                        <h4>Filtrar</h4>
+                        <input type="checkbox" id="precio1">
+                        <label for="rango1">$500 - $1000</label>
+                        <input type="checkbox">
+                        <label for="rango1">$1000 - $1500</label>
+                        <input type="checkbox">
+                        <label for="rango1">$1500 - $2000</label>
+                        <input type="checkbox">
+                        <label for="rango1">Más de $2000</label>
+                    </div>
+
+                    <div class="contenedor-colores">
+                        <div class="color-r">
+                            <div id="rojo"></div>
+                            <p>Rojo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contenedor-tenis">
+                <div class="tenis">
+                    <img src="./img/Dior.png" alt="Sneaker 1" style="object-fit: contain;">
+                    <h3>Jordan 1 Dior</h3>
+                    <p>Jordan 1 Low Dior.</p>
+                    <span>$120,000.00</span>
+                </div>
+                <div class="tenis">
+                    <img src="./img/dunk_freddykrueger.png" alt="Sneaker 2" style="object-fit: contain;" >
+                    <h3>Dunk Freddy Krueger</h3>
+                    <p>Dunk Low Freddy Krueger.</p>
+                    <span>$1,200,000.00</span>
+                </div>
+                <div class="tenis">
+                    <img src="./img/Jordan_1_Travis_Frafment.png" alt="Sneaker 3" style="object-fit: contain;">
+                    <h3> Jordan 1 Travis Scott x Fragment</h3>
+                    <p>Jordan 1 Travis Scott x Fragment.</p>
+                    <span>$32,499.00</span>
+                </div>
+
+                <div class="tenis">
+                    <img src="./img/Dior.png" alt="Sneaker 1" style="object-fit: contain;">
+                    <h3>Jordan 1 Dior</h3>
+                    <p>Jordan 1 Low Dior.</p>
+                    <span>$120,000.00</span>
+                </div>
+                <div class="tenis">
+                    <img src="./img/dunk_freddykrueger.png" alt="Sneaker 2" style="object-fit: contain;" >
+                    <h3>Dunk Freddy Krueger</h3>
+                    <p>Dunk Low Freddy Krueger.</p>
+                    <span>$1,200,000.00</span>
+                </div>
+                <div class="tenis">
+                    <img src="./img/Jordan_1_Travis_Frafment.png" alt="Sneaker 3" style="object-fit: contain;">
+                    <h3> Jordan 1 Travis Scott x Fragment</h3>
+                    <p>Jordan 1 Travis Scott x Fragment.</p>
+                    <span>$32,499.00</span>
+                </div>
+
+                <div class="tenis">
+                    <img src="./img/Dior.png" alt="Sneaker 1" style="object-fit: contain;">
+                    <h3>Jordan 1 Dior</h3>
+                    <p>Jordan 1 Low Dior.</p>
+                    <span>$120,000.00</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="footer-arriba">
@@ -105,7 +195,7 @@
 
         <div id="footer-botones">
             <a href="./contacto.html">Contacto</a>
-            <a href="#">Sobre Nosotros</a>
+            <a href="./sobreNosotros.html">Sobre Nosotros</a>
         </div>
 
         <p class="footer-popa">© 2025 PopaShoes México S.A. de C.V.</p>
