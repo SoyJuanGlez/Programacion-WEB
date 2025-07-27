@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Tenis | PopaShoes</title>
+
+    <link rel="preload" href="./styles/style.css" as="style">
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <link rel="stylesheet" href="./styles/styleAgregarTenis.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="./img/logo_color.png">
+</head>
+<body>
+    <header class="header-adidas">
+        <div class="header-top">
+            <div class="header-container">
+                <a href="./Proyecto.html" id="logo-a">
+                    <div class="header-left">
+                        <img src="./img/logo_color.png" alt="PopaShoes" id="logo-popas">
+                                        
+                        <div class="brand-title-small">
+                                <h1 class="titulo">PopaShoes</h1>
+                                <span class="subtitulo">Tu tienda de Sneakers Favorita</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <div class="header-center">
+                    <nav class="nav-principal">
+                        <a href="./Proyecto.html" class="nav-link active">Inicio</a>
+                        <a href="./seccionHombres.html" class="nav-link">Hombres</a>
+                        <a href="./seccionMujeres.html" class="nav-link">Mujeres</a>
+                    </nav>
+                </div>
+                <div class="header-right">
+                    <div class="search-container">
+                        <input type="text" placeholder="Buscar productos..." class="search-input">
+                        <button class="search-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="user-actions">
+                        <a href="./agregarTenis.html">
+                            <button class="add-btn">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="12" y1="5" x2="12" y2="19" />
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                </svg>
+                            </button>
+                        </a>
+                        
+                        <button class="user-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </button>
+
+                        <button id="carrito-btn" class="carrito-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 22c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM20 22c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM1 2h4.27l.94 2H20l-3.64 7.14"></path>
+                                <path d="M7.68 13.27L6.4 11H1"></path>
+                            </svg>
+                            <span id="carrito-contador">0</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Agregar Tenis</h2>
+
+        <section class="form-section">
+            <h3>Información general</h3>
+
+            <div class="form">
+                <div class="renglon1">
+                    <input type="text" placeholder="Nombre" id="nombre">
+                    <input type="text" placeholder="Descripción" id="descripcion">
+                </div>
+
+                <div class="renglon2">
+                    <input type="number" placeholder="Precio" min="0" id="precio">
+                    <div class="radio-container">
+                        <span class="radio-title">Tipo:</span>
+                        
+                        <div class="radio-options">
+                            <input type="radio" id="tipo-hombre" name="tipo" value="Hombre">
+                            <label style="font-size: 15px;" for="tipo-hombre">Hombre</label>
+
+                            <input type="radio" id="tipo-mujer" name="tipo" value="Mujer">
+                            <label style="font-size: 15px;" for="tipo-mujer">Mujer</label>
+                        </div>
+                    </div>
+                </div>
+
+                <input type="hidden" id="color">
+                <div class="colores-tenis">
+                    <h5>Seleccione un color:</h5>
+                    <div class="contenedor-colores">
+                        <div id="red" class="color-box"></div>     
+                        <div id="blue" class="color-box"></div>    
+                        <div id="yellow" class="color-box"></div>
+                        <div id="green" class="color-box"></div>
+                        <div id="black" class="color-box"></div>                   
+                        <div id="white" class="color-box"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <input type="text" placeholder="URL de Imagen" class="url-input" id="imagen">
+                    <button onclick="agregarTenis()">Agregar</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Lista de Tenis</h2>
+            <div class="contenedor-tenis" id="obtenerTodos-Tenis"></div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-arriba">
+            <img src="./img/Logo.png" alt="" id="logo-footer">
+            <h4>PopaShoes</h4>
+            <div class="ubicacion">
+                <p>
+                    Tepic, Nayarit, México
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" stroke-width="2">
+                        <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+                        <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
+                    </svg>
+                </p>
+            </div>
+        </div>
+
+        <hr class="footer-hr">
+
+        <div id="footer-botones">
+            <a href="./contacto.html">Contacto</a>
+            <a href="./sobreNosotros.html">Sobre Nosotros</a>
+        </div>
+
+        <p class="footer-popa">© 2025 PopaShoes México S.A. de C.V.</p>
+    </footer>
+    <script src="./js/seleccionarColor.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

@@ -250,7 +250,8 @@ h1,h2,h3{
 }
 
 .user-btn,
-.carrito-btn {
+.carrito-btn,
+.add-btn {
     background: none;
     border: none;
     padding: 0.8rem;
@@ -264,7 +265,8 @@ h1,h2,h3{
 }
 
 .user-btn:hover,
-.carrito-btn:hover {
+.carrito-btn:hover,
+.add-btn:hover {
     background-color: rgba(0, 151, 167, 0.1);
     color: var(--secundario);
 }
@@ -368,7 +370,8 @@ h1,h2,h3{
     }
     
     .user-btn,
-    .carrito-btn {
+    .carrito-btn,
+    .add-btn {
         padding: 0.6rem;
     }
     

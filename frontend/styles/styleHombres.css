@@ -25,7 +25,7 @@
 
 .contenedor-filtros {
     border: 1px solid #F5F5F5;
-    background-color: #F5F5F5;
+    background-color: #f5f5f5;
     border-radius: 15px;
     width: 330px;
     margin-right: 15px;
@@ -62,6 +62,7 @@
     border-radius: 40px;
     cursor: pointer;
     background-color: #d7dbdc;
+    font-size: 15px;
     font-weight: bold;
     transition: all 0.3s ease-in-out;
 }
@@ -76,7 +77,7 @@ select {
     padding: 10px;
     color: #333;
     border: 1px solid #ccc;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .checkbox-precios {
@@ -88,88 +89,120 @@ select {
     padding: 0;
     margin: 0;
     padding-top: 45px;
+    font-size: 20px;
 }
 
-.checkbox-precios h5 {
+h5 {
     padding: 15px 0px;
     margin: 0;
+    font-size: 18px;
 }
 
 .contenedor-checkbox {
     line-height: 25px;
+    font-size: 16px;
 }
 
 .contenedor-checkbox input[type="checkbox"]:hover {
     cursor: pointer;
 }
 
-.colores-tenis p {
-    font-size: 10px;
-    font-weight: bold;
-}
-
+/* Colores */
 .contenedor-colores {
     display: flex;
+    flex-direction: column;
+    padding: 0px 15px;
+}
+
+.colores-tenis p {
+    font-size: 16px;
+}
+
+.color-r {
+    display: flex;
     flex-direction: row;
-    justify-content: space-around;    
+    gap: 10px;
+}
+
+.color-b {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.color-y {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.color-g {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.color-white {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.color-black {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#red,
+#blue,
+#yellow,
+#green,
+#black,
+#white {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    margin-top: 5px;
 }
 
 #red {
-    background-color: red;
-    border: 1px solid rgb(177, 6, 6);
-    width: 25px;
-    height: 25px;
-    border-radius: 50px;
-    transition: all 0.3s ease-in-out;
+    background-color: #f56161;
+    border: 1px solid #f56161;
 }
 
 #blue {
-    background-color: blue;
-    border: 1px solid rgb(12, 12, 163);
-    width: 25px;
-    height: 25px;
-    border-radius: 50px;
-    transition: all 0.3s ease-in-out;
+    background-color: #1E90FF;
+    border: 1px solid #1E90FF;
 }
 
 #yellow {
-    background-color: yellow;
-    border: 1px solid rgb(161, 161, 6);
-    width: 25px;
-    height: 25px;
-    border-radius: 50px;
-    margin-left: 8px;
-    transition: all 0.3s ease-in-out;
+    background-color: #FFD700;
+    border: 1px solid #FFD700;
 }
 
 #green {
-    background-color: green;
-    border: 1px solid rgb(3, 62, 3);
-    width: 25px;
-    height: 25px;
-    border-radius: 50px;
-    transition: all 0.3s ease-in-out;
+    background-color: #24c971;
+    border: 1px solid #24c971;
 }
 
-#red:hover {
-    transform: scale(1.15);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
+#black {
+    background-color: #282d32;
+    border: 1px solid #282d32;
 }
 
-#blue:hover {
-    transform: scale(1.15);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
+#white {
+    background-color: white;
+    border: 1px solid rgb(215, 211, 211);
 }
 
-#yellow:hover {
-    transform: scale(1.15);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-}
-
-#green:hover {
+#red:hover,
+#blue:hover,
+#yellow:hover,
+#green:hover,
+#black:hover,
+#white:hover {
     transform: scale(1.15);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     cursor: pointer;
@@ -187,10 +220,20 @@ select {
 
 /* TENIS */
 
+.contenedor-tenis {
+    width: 100%;
+    border: none;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+}
+
+/* TENIS */
+
 .tenis {
     width: 100%;
     max-width: 300px;
-    height: auto;
+    height: 367px;
     border: 1px solid #ddd;
     border-radius: 10px;
     background-color: white;
@@ -262,34 +305,4 @@ select {
     background-color: #FFC107;
     color: black;
     cursor: pointer;
-}
-
-/* Contenedor Botones */
-.boton-paginas {
-    grid-column: 1 / -1;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding-top: 25px;
-    padding-bottom: 30px;
-    width: 100%;
-}
-
-.boton-num {
-    padding: 10px;
-    padding-inline: 15px;
-    border-radius: 80px;
-    font-weight: bold;
-    transition: transform 0.2s ease;
-    background-color: #edecec;
-}
-
-.boton-num:hover {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transform: scale(1.03);
-}
-
-.boton-paginas a {
-    text-decoration: none;
-    color: black;
 }

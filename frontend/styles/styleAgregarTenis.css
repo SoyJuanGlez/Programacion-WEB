@@ -1,0 +1,291 @@
+.container {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.form-section {
+    background-color: #F5F5F5;
+    padding: 30px;
+    border-radius: 15px;
+    width: 950px;
+    margin: auto;
+}
+
+.form-section h3 {
+    text-align: left;
+    margin-left: 15px;
+    font-size: 22px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.renglon1 {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.renglon2 {
+    display: flex;
+}
+
+.radio-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+.radio-title {
+    font-weight: bold;
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+.radio-options {
+    display: flex;
+    align-items: center;
+}
+
+.radio-options input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #0097A7;
+}
+
+.form input {
+    width: 350px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    font-size: 15px;
+    margin-inline: 10px;
+}
+
+.form input[type="number"] {
+    width: 180px;
+}
+
+.form .url-input {
+    width: 550px;
+}
+
+.form input:focus {
+    outline: none;
+    border: 1px solid gray;
+}
+
+.form button {
+    background-color: #0097A7;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 8px;
+    width: 290px;
+    border-radius: 5px;
+    margin-left: 16px;
+}
+
+.form button:hover {
+    background-color: #FFC107;
+    color: black;
+    cursor: pointer;
+}
+
+/* Colores */
+.contenedor-colores {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    padding: 10px;
+}
+
+.colores-tenis h5 {
+    margin: 0;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+#red,
+#blue,
+#yellow,
+#green,
+#black,
+#white {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    margin-top: 5px;
+}
+
+#red {
+    background-color: #f56161;
+    border: 1px solid #f56161;
+}
+
+#blue {
+    background-color: #1E90FF;
+    border: 1px solid #1E90FF;
+}
+
+#yellow {
+    background-color: #FFD700;
+    border: 1px solid #FFD700;
+}
+
+#green {
+    background-color: #24c971;
+    border: 1px solid #24c971;
+}
+
+#black {
+    background-color: #282d32;
+    border: 1px solid #282d32;
+}
+
+#white {
+    background-color: white;
+    border: 1px solid rgb(215, 211, 211);
+}
+
+#red:hover,
+#blue:hover,
+#yellow:hover,
+#green:hover,
+#black:hover,
+#white:hover {
+    transform: scale(1.15);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.color-box.seleccionado {
+    border: 6px solid #aeabab;
+    box-shadow: 0 0 12px 4px #aeabab;
+}
+
+/* LISTA DE TENIS */
+.contenedor-tenis {
+    width: 100%;
+    border: none;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    gap: 25px;
+    padding: 10px;
+}
+
+/* TENIS */
+
+.tenis {
+    max-width: 100%;
+    height: 345px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+
+.tenis:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 1px solid rgb(201, 196, 196);
+    cursor: pointer;
+}
+
+.img-tenis {
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+    background-color: #f5f5f5;
+    padding: 12px;
+    transition: transform 0.3s ease;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.texto-tenis {
+    padding: 0px 5px 10px 10px;
+    text-align: left;
+}
+
+.tenis h3 {
+    text-align: center;
+    font-size: 16px;
+}
+
+.tenis p {
+    font-size: 14px;
+}
+
+.UpdDel-tenis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+
+.UpdDel-tenis span {
+    font-size: 13px;
+    color: #8b8888;
+    font-weight: bold;
+}
+
+.UpdDel-tenis input {
+    border: none;
+    border-radius: 10px;
+    padding: 6px;
+    margin: 5px auto;
+    background-color: #0097A7;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 13px;   
+    width: 200px;    
+    height: 25px; 
+}
+
+.precio-tenis {
+    margin-bottom: 5px;
+}
+
+.UpdDel-tenis .update,
+.UpdDel-tenis .delete {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.UpdDel-tenis .update {
+    background-color: #0CAF4B;
+}
+
+.UpdDel-tenis .delete {
+    background-color: #D7263D;
+}
+
+.UpdDel-tenis .update:hover {
+    background-color: #09943F;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.UpdDel-tenis .delete:hover {
+    background-color: #B91E30;
+    transform: scale(1.05);
+    cursor: pointer;
+}
