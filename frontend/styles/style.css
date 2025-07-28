@@ -451,6 +451,21 @@ h1,h2,h3{
     position: relative;
 }
 
+.imagen_SN{
+    background-image: url(../img/Mesa.jpg); /* Cambiado a Fondo.png */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-width: 100vw;
+    overflow-x: hidden;
+    position: relative;
+}
+
 .contenido-imagen{
     position: absolute;
     background-color: rgba(0, 0, 0,.5); /*Anterior */
@@ -795,4 +810,50 @@ footer a:hover {
     text-align: center;
     font-size: 1.4rem;
     margin-top: 2rem;
+}
+
+.sobre-nosotros-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 2rem;
+    background: #fafafa;
+    max-width: 900px;
+    margin: 3rem auto 2rem auto;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+.sobre-nosotros-info {
+    flex: 1;
+    min-width: 250px;
+    padding: 2rem 1rem;
+    text-align: left;
+}
+
+.sobre-nosotros-titulo {
+    font-size: 3.2rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    color: var(--secundario);
+    letter-spacing: 1px;
+}
+
+.sobre-nosotros-subtitulo {
+    font-size: 2.1rem;
+    color: var(--primario);
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.sobre-nosotros-descripcion {
+    font-size: 1.6rem;
+    color: #222;
+    margin-bottom: 2rem;
+    line-height: 2.1;
+    background: #fff;
+    border-radius: 8px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 2px 8px #0001;
+    letter-spacing: 0.5px;
 }
