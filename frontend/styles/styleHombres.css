@@ -55,7 +55,8 @@
     border: none;
 }
 
-.contenedor-ordenar form input {
+.contenedor-ordenar form input,
+.contenedor-radio form input[type="reset"] {
     width: 100%;
     height: 30px;
     border: none;
@@ -67,7 +68,8 @@
     transition: all 0.3s ease-in-out;
 }
 
-.contenedor-ordenar form input:hover {
+.contenedor-ordenar form input:hover,
+.contenedor-radio form input[type="reset"]:hover {
     transform: scale(1.0);
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
 }
@@ -80,12 +82,12 @@ select {
     font-size: 16px;
 }
 
-.checkbox-precios {
+.radio-precios {
     display: flex;
     flex-direction: column;
 }
 
-.checkbox-precios h4 {
+.radio-precios h4 {
     padding: 0;
     margin: 0;
     padding-top: 45px;
@@ -98,12 +100,12 @@ h5 {
     font-size: 18px;
 }
 
-.contenedor-checkbox {
+.contenedor-radio {
     line-height: 25px;
     font-size: 16px;
 }
 
-.contenedor-checkbox input[type="checkbox"]:hover {
+.contenedor-radio input[type="radio"]:hover {
     cursor: pointer;
 }
 

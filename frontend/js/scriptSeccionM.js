@@ -33,6 +33,152 @@ async function obtenerTenisMujer() {
     }
 }
 
+/* ORDENAR PRECIOS */
+
+
+/* FILTRO PRECIOS */
+//$1000 - $2000
+async function obtenerTenisPrecio1() {
+    try {
+        const res = await fetch(`${apiURL}/getShoes`);
+        const data = await res.json();
+
+        const tenisDiv = document.getElementById('obtenerTenis-Mujer');
+        tenisDiv.innerHTML = '';
+        
+        data.shoes
+        .filter(teni => teni.tipo === "Mujer")
+        .filter(teni => teni.precio >= 1000 && teni.precio <= 2000)
+        .forEach(teni => {
+            const div = document.createElement('div');
+            div.classList.add('tenis');
+            
+            div.innerHTML = `
+                <img src="${teni.imagen}" alt="Sneaker" class="img-tenis">
+                <div class="texto-tenis">
+                    <h3>${teni.nombre}</h3>
+                    <p>${teni.descripcion}</p>
+                    <div class="comprar-tenis">
+                        <span>$${teni.precio}</span>
+                        <input type="submit" value="Comprar">
+                    </div>
+                </div>
+            `;
+            tenisDiv.appendChild(div);
+        });
+    } catch(error) {
+        alert("Error al obtener los Productos.");
+        console.log(error)
+    }
+}
+
+//$2000 - $3000
+async function obtenerTenisPrecio2() {
+    try {
+        const res = await fetch(`${apiURL}/getShoes`);
+        const data = await res.json();
+
+        const tenisDiv = document.getElementById('obtenerTenis-Mujer');
+        tenisDiv.innerHTML = '';
+        
+        data.shoes
+        .filter(teni => teni.tipo === "Mujer")
+        .filter(teni => teni.precio >= 2000 && teni.precio <= 3000)
+        .forEach(teni => {
+            const div = document.createElement('div');
+            div.classList.add('tenis');
+            
+            div.innerHTML = `
+                <img src="${teni.imagen}" alt="Sneaker" class="img-tenis">
+                <div class="texto-tenis">
+                    <h3>${teni.nombre}</h3>
+                    <p>${teni.descripcion}</p>
+                    <div class="comprar-tenis">
+                        <span>$${teni.precio}</span>
+                        <input type="submit" value="Comprar">
+                    </div>
+                </div>
+            `;
+            tenisDiv.appendChild(div);
+        });
+    } catch(error) {
+        alert("Error al obtener los Productos.");
+        console.log(error)
+    }
+}
+
+//$3000 - $4000
+async function obtenerTenisPrecio3() {
+    try {
+        const res = await fetch(`${apiURL}/getShoes`);
+        const data = await res.json();
+
+        const tenisDiv = document.getElementById('obtenerTenis-Mujer');
+        tenisDiv.innerHTML = '';
+        
+        data.shoes
+        .filter(teni => teni.tipo === "Mujer")
+        .filter(teni => teni.precio >= 3000 && teni.precio <= 4000)
+        .forEach(teni => {
+            const div = document.createElement('div');
+            div.classList.add('tenis');
+            
+            div.innerHTML = `
+                <img src="${teni.imagen}" alt="Sneaker" class="img-tenis">
+                <div class="texto-tenis">
+                    <h3>${teni.nombre}</h3>
+                    <p>${teni.descripcion}</p>
+                    <div class="comprar-tenis">
+                        <span>$${teni.precio}</span>
+                        <input type="submit" value="Comprar">
+                    </div>
+                </div>
+            `;
+            tenisDiv.appendChild(div);
+        });
+    } catch(error) {
+        alert("Error al obtener los Productos.");
+        console.log(error)
+    }
+}
+
+//Más de $4000
+async function obtenerTenisPrecio4() {
+    try {
+        const res = await fetch(`${apiURL}/getShoes`);
+        const data = await res.json();
+
+        const tenisDiv = document.getElementById('obtenerTenis-Mujer');
+        tenisDiv.innerHTML = '';
+        
+        data.shoes
+        .filter(teni => teni.tipo === "Mujer")
+        .filter(teni => teni.precio >= 4000)
+        .forEach(teni => {
+            const div = document.createElement('div');
+            div.classList.add('tenis');
+            
+            div.innerHTML = `
+                <img src="${teni.imagen}" alt="Sneaker" class="img-tenis">
+                <div class="texto-tenis">
+                    <h3>${teni.nombre}</h3>
+                    <p>${teni.descripcion}</p>
+                    <div class="comprar-tenis">
+                        <span>$${teni.precio}</span>
+                        <input type="submit" value="Comprar">
+                    </div>
+                </div>
+            `;
+            tenisDiv.appendChild(div);
+        });
+    } catch(error) {
+        alert("Error al obtener los Productos.");
+        console.log(error)
+    }
+}
+
+/* FILTRO COLOR */
+
 async function obtenerTenisRojos() {
     try {
         const res = await fetch(`${apiURL}/getShoes`);
