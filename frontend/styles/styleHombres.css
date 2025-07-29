@@ -105,6 +105,10 @@ h5 {
     font-size: 16px;
 }
 
+.contenedor-radio input[type="reset"] {
+    margin-top: 10px;
+}
+
 .contenedor-radio input[type="radio"]:hover {
     cursor: pointer;
 }
