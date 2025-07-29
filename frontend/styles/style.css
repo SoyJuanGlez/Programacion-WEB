@@ -80,6 +80,10 @@ h1,h2,h3{
     font-size: 2rem;
 }
 
+.titulo-seccion{
+    padding-top: 1rem;
+}
+
 /* HEADER ESTILO ADIDAS */
 .header-adidas {
     background-color: var(--blanco);
