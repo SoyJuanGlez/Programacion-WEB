@@ -116,6 +116,10 @@ h5 {
     padding: 0px 15px;
 }
 
+.colores-tenis h5 {
+    margin-top: 30px;
+}
+
 .colores-tenis p {
     font-size: 16px;
 }

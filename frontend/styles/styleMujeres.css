@@ -69,7 +69,7 @@
 }
 
 .contenedor-ordenar form input:hover,
-.contenedor-radio form input[type="reset"] {
+.contenedor-radio form input[type="reset"]:hover {
     transform: scale(1.0);
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
 }
@@ -115,6 +115,10 @@ h5 {
     display: flex;
     flex-direction: column;
     padding: 0px 15px;
+}
+
+.colores-tenis h5 {
+    margin-top: 30px;
 }
 
 .colores-tenis p {
