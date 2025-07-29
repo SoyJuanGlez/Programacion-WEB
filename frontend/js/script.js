@@ -94,6 +94,11 @@ async function actualizarTenis(id) {
     const color = document.getElementById('color').value.trim();
     const imagen = document.getElementById('imagen').value.trim();
     
+    if(!nombre || !descripcion || isNaN(precio) || !tipo || !color || !imagen) {
+        alert("Por favor completa todos los campos correctamente.");
+        return;
+    }
+
     try {
         const res = await fetch(`${apiURL}/updateShoes/${id}`, {
             method: 'PUT',

@@ -33,4 +33,208 @@ async function obtenerTenisMujer() {
     }
 }
 
+async function obtenerTenisRojos() {
+    try {
+        const res = await fetch(`${apiURL}/getShoes`);
+        const data = await res.json();
+
+        const tenisDiv = document.getElementById('obtenerTenis-Mujer');
+        tenisDiv.innerHTML = '';
+        
+        data.shoes
+        .filter(teni => teni.tipo === "Mujer")
+        .filter(teni => teni.color === "red")
+        .forEach(teni => {
+            const div = document.createElement('div');
+            div.classList.add('tenis');
+            
+            div.innerHTML = `
+                <img src="${teni.imagen}" alt="Sneaker" class="img-tenis">
+                <div class="texto-tenis">
+                    <h3>${teni.nombre}</h3>
+                    <p>${teni.descripcion}</p>
+                    <div class="comprar-tenis">
+                        <span>$${teni.precio}</span>
+                        <input type="submit" value="Comprar">
+                    </div>
+                </div>
+            `;
+            tenisDiv.appendChild(div);
+        });
+    } catch(error) {
+        alert("Error al obtener los Productos.");
+        console.log(error)
+    }
+}
+
+async function obtenerTenisAzules() {
+    try {
+        const res = await fetch(`${apiURL}/getShoes`);
+        const data = await res.json();
+
+        const tenisDiv = document.getElementById('obtenerTenis-Mujer');
+        tenisDiv.innerHTML = '';
+        
+        data.shoes
+        .filter(teni => teni.tipo === "Mujer")
+        .filter(teni => teni.color === "blue")
+        .forEach(teni => {
+            const div = document.createElement('div');
+            div.classList.add('tenis');
+            
+            div.innerHTML = `
+                <img src="${teni.imagen}" alt="Sneaker" class="img-tenis">
+                <div class="texto-tenis">
+                    <h3>${teni.nombre}</h3>
+                    <p>${teni.descripcion}</p>
+                    <div class="comprar-tenis">
+                        <span>$${teni.precio}</span>
+                        <input type="submit" value="Comprar">
+                    </div>
+                </div>
+            `;
+            tenisDiv.appendChild(div);
+        });
+    } catch(error) {
+        alert("Error al obtener los Productos.");
+        console.log(error)
+    }
+}
+
+async function obtenerTenisAmarillos() {
+    try {
+        const res = await fetch(`${apiURL}/getShoes`);
+        const data = await res.json();
+
+        const tenisDiv = document.getElementById('obtenerTenis-Mujer');
+        tenisDiv.innerHTML = '';
+        
+        data.shoes
+        .filter(teni => teni.tipo === "Mujer")
+        .filter(teni => teni.color === "yellow")
+        .forEach(teni => {
+            const div = document.createElement('div');
+            div.classList.add('tenis');
+            
+            div.innerHTML = `
+                <img src="${teni.imagen}" alt="Sneaker" class="img-tenis">
+                <div class="texto-tenis">
+                    <h3>${teni.nombre}</h3>
+                    <p>${teni.descripcion}</p>
+                    <div class="comprar-tenis">
+                        <span>$${teni.precio}</span>
+                        <input type="submit" value="Comprar">
+                    </div>
+                </div>
+            `;
+            tenisDiv.appendChild(div);
+        });
+    } catch(error) {
+        alert("Error al obtener los Productos.");
+        console.log(error)
+    }
+}
+
+async function obtenerTenisVerdes() {
+    try {
+        const res = await fetch(`${apiURL}/getShoes`);
+        const data = await res.json();
+
+        const tenisDiv = document.getElementById('obtenerTenis-Mujer');
+        tenisDiv.innerHTML = '';
+        
+        data.shoes
+        .filter(teni => teni.tipo === "Mujer")
+        .filter(teni => teni.color === "green")
+        .forEach(teni => {
+            const div = document.createElement('div');
+            div.classList.add('tenis');
+            
+            div.innerHTML = `
+                <img src="${teni.imagen}" alt="Sneaker" class="img-tenis">
+                <div class="texto-tenis">
+                    <h3>${teni.nombre}</h3>
+                    <p>${teni.descripcion}</p>
+                    <div class="comprar-tenis">
+                        <span>$${teni.precio}</span>
+                        <input type="submit" value="Comprar">
+                    </div>
+                </div>
+            `;
+            tenisDiv.appendChild(div);
+        });
+    } catch(error) {
+        alert("Error al obtener los Productos.");
+        console.log(error)
+    }
+}
+
+async function obtenerTenisNegros() {
+    try {
+        const res = await fetch(`${apiURL}/getShoes`);
+        const data = await res.json();
+
+        const tenisDiv = document.getElementById('obtenerTenis-Mujer');
+        tenisDiv.innerHTML = '';
+        
+        data.shoes
+        .filter(teni => teni.tipo === "Mujer")
+        .filter(teni => teni.color === "black")
+        .forEach(teni => {
+            const div = document.createElement('div');
+            div.classList.add('tenis');
+            
+            div.innerHTML = `
+                <img src="${teni.imagen}" alt="Sneaker" class="img-tenis">
+                <div class="texto-tenis">
+                    <h3>${teni.nombre}</h3>
+                    <p>${teni.descripcion}</p>
+                    <div class="comprar-tenis">
+                        <span>$${teni.precio}</span>
+                        <input type="submit" value="Comprar">
+                    </div>
+                </div>
+            `;
+            tenisDiv.appendChild(div);
+        });
+    } catch(error) {
+        alert("Error al obtener los Productos.");
+        console.log(error)
+    }
+}
+
+async function obtenerTenisBlancos() {
+    try {
+        const res = await fetch(`${apiURL}/getShoes`);
+        const data = await res.json();
+
+        const tenisDiv = document.getElementById('obtenerTenis-Mujer');
+        tenisDiv.innerHTML = '';
+        
+        data.shoes
+        .filter(teni => teni.tipo === "Mujer")
+        .filter(teni => teni.color === "white")
+        .forEach(teni => {
+            const div = document.createElement('div');
+            div.classList.add('tenis');
+            
+            div.innerHTML = `
+                <img src="${teni.imagen}" alt="Sneaker" class="img-tenis">
+                <div class="texto-tenis">
+                    <h3>${teni.nombre}</h3>
+                    <p>${teni.descripcion}</p>
+                    <div class="comprar-tenis">
+                        <span>$${teni.precio}</span>
+                        <input type="submit" value="Comprar">
+                    </div>
+                </div>
+            `;
+            tenisDiv.appendChild(div);
+        });
+    } catch(error) {
+        alert("Error al obtener los Productos.");
+        console.log(error)
+    }
+}
+
 obtenerTenisMujer();
