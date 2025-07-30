@@ -28,6 +28,24 @@ app.get('/', (req, res) => {
     });
 });
 
+app.get('/searchShoes', async (req, res) => {
+    try {
+        const searchQuery = req.query.q || '';
+        const regex = new RegExp('^' + searchQuery, 'i'); 
+        const results = await Shoe.find({ nombre: regex });
+
+        res.status(200).json({
+            message: "Resultados encontrados",
+            shoes: results
+        });
+    } catch (error) {
+        res.status(500).json({
+            message: "Error al buscar productos",
+            error: error
+        });
+    }
+});
+
 app.get('/getShoes', async (req, res) => {
     try {
         const shoes = await Shoe.find();

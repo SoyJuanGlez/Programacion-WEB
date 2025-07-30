@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agregar Tenis | PopaShoes</title>
+    <title>PopaShoes</title>
 
     <link rel="preload" href="./styles/style.css" as="style">
     <link rel="stylesheet" href="./styles/style.css">
 
-    <link rel="stylesheet" href="./styles/styleAgregarTenis.css">
+    <link rel="stylesheet" href="./js/resultados.js">
+    <script src="./js/resultados.js" defer></script>
     <script src="./js/buscador.js" defer></script>
+    <script src="./js/carrito.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,11 +19,12 @@
 
     <link rel="icon" href="./img/logo_color.png">
 </head>
+
 <body>
     <header class="header-adidas">
         <div class="header-top">
             <div class="header-container">
-                <a href="./Proyecto.html" id="logo-a">
+                <a href="#" id="logo-a">
                     <div class="header-left">
                         <img src="./img/logo_color.png" alt="PopaShoes" id="logo-popas">
                                         
@@ -34,7 +37,7 @@
                 
                 <div class="header-center">
                     <nav class="nav-principal">
-                        <a href="./Proyecto.html" class="nav-link active">Inicio</a>
+                        <a href="./Proyecto.html" class="nav-link">Inicio</a>
                         <a href="./seccionHombres.html" class="nav-link">Hombres</a>
                         <a href="./seccionMujeres.html" class="nav-link">Mujeres</a>
                     </nav>
@@ -80,58 +83,53 @@
         </div>
     </header>
 
-    <div class="container">
-        <h2>Agregar Tenis</h2>
-
-        <section class="form-section">
-            <h3>Información general</h3>
-
-            <div class="form">
-                <div class="renglon1">
-                    <input type="text" placeholder="Nombre" id="nombre">
-                    <input type="text" placeholder="Descripción" id="descripcion">
-                </div>
-
-                <div class="renglon2">
-                    <input type="number" placeholder="Precio" min="0" id="precio">
-                    <div class="radio-container">
-                        <span class="radio-title">Tipo:</span>
-                        
-                        <div class="radio-options">
-                            <input type="radio" id="tipo-hombre" name="tipo" value="Hombre">
-                            <label style="font-size: 15px;" for="tipo-hombre">Hombre</label>
-
-                            <input type="radio" id="tipo-mujer" name="tipo" value="Mujer">
-                            <label style="font-size: 15px;" for="tipo-mujer">Mujer</label>
-                        </div>
-                    </div>
-                </div>
-
-                <input type="hidden" id="color">
-                <div class="colores-tenis">
-                    <h5>Seleccione un color:</h5>
-                    <div class="contenedor-colores">
-                        <div id="red" class="color-box"></div>     
-                        <div id="blue" class="color-box"></div>    
-                        <div id="yellow" class="color-box"></div>
-                        <div id="green" class="color-box"></div>
-                        <div id="black" class="color-box"></div>                   
-                        <div id="white" class="color-box"></div>
-                    </div>
-                </div>
-
-                <div>
-                    <input type="text" placeholder="URL de Imagen" class="url-input" id="imagen">
-                    <button onclick="agregarTenis()">Agregar</button>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Lista de Tenis</h2>
-            <div class="contenedor-tenis" id="obtenerTodos-Tenis"></div>
-        </section>
+    <!-- Modal del carrito -->
+    <div id="carrito-modal" class="carrito-modal">
+        <div class="carrito-modal-content">
+            <span class="cerrar-modal" id="cerrar-carrito">&times;</span>
+            <h2>Tu Carrito</h2>
+            <p>Aún no tienes productos en tu carrito.</p>
+        </div>
     </div>
+
+    <!--Barra de navegacion removida - ahora integrada en header-->
+
+    <section class="imagen">
+        <div class ="contenido-imagen">
+            <h2>Encuentra los mejores Sneakers Aqui</h2>
+        </div>
+    </section>
+
+    <section>
+        <div class="contenedor">
+            <h2 class="titulo-seccion">Resultados de búsqueda</h2>
+            <div class="productos" id="productos-container"></div>
+        </div>
+    </section>
+
+    <section>
+        <div class="contenedor">
+            <a href="./seccionHombres.html" style="text-decoration: none;">
+                <div class="seccion-hombre">
+                    <div id="titulo-h">
+                        HOMBRES
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section>
+        <div class="contenedor">
+            <a href="./seccionMujeres.html" style="text-decoration: none;">
+                <div class="seccion-mujer">
+                    <div id="titulo-m">
+                        MUJERES
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
 
     <footer>
         <div class="footer-arriba">
@@ -157,7 +155,5 @@
 
         <p class="footer-popa">© 2025 PopaShoes México S.A. de C.V.</p>
     </footer>
-    <script src="./js/seleccionarColor.js"></script>
-    <script src="./js/script.js"></script>
-</body>
+</body> 
 </html>
