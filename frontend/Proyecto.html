@@ -20,9 +20,11 @@
 </head>
 
 <body>
+    <!-- HEADER - NAVEGACIÓN PRINCIPAL -->
     <header class="header-adidas">
         <div class="header-top">
             <div class="header-container">
+                <!-- Logo y título de la marca -->
                 <a href="#" id="logo-a">
                     <div class="header-left">
                         <img src="./img/logo_color.png" alt="PopaShoes" id="logo-popas">
@@ -34,6 +36,7 @@
                     </div>
                 </a>
                 
+                <!-- Navegación central -->
                 <div class="header-center">
                     <nav class="nav-principal">
                         <a href="#" class="nav-link active">Inicio</a>
@@ -41,6 +44,7 @@
                         <a href="./seccionMujeres.html" class="nav-link">Mujeres</a>
                     </nav>
                 </div>
+                <!-- Acciones del usuario (buscar, agregar, perfil, carrito) -->
                 <div class="header-right">
                     <div class="search-container">
                         <input type="text" id="searchInput" placeholder="Buscar productos..." class="search-input">
@@ -82,7 +86,7 @@
         </div>
     </header>
 
-    <!-- Modal del carrito -->
+    <!-- MODAL DEL CARRITO DE COMPRAS -->
     <div id="carrito-modal" class="carrito-modal">
         <div class="carrito-modal-content">
             <span class="cerrar-modal" id="cerrar-carrito">&times;</span>
@@ -91,19 +95,21 @@
         </div>
     </div>
 
-    <!--Barra de navegacion removida - ahora integrada en header-->
-
+    <!-- SECCIÓN HERO - IMAGEN PRINCIPAL -->
     <section class="imagen">
         <div class ="contenido-imagen">
+            <!-- Texto principal y call-to-action -->
             <h2>Sneakers Exclusivos para Todos</h2>
 
             <a class="boton" href="#ProductosDesta">Ver Sneakers</a>
         </div>
     </section>
 
+    <!-- SECCIÓN PRODUCTOS DESTACADOS -->
     <section>
         <div class="contenedor">
             <h2 id="ProductosDesta" class="titulo-seccion">Productos Destacados</h2>
+            <!-- Grid de productos principales -->
             <div class="productos" id="productos-container">
                 <div class="producto">
                     <img src="./img/Dior.png" alt="Sneaker 1" style="object-fit: contain;">
@@ -132,8 +138,10 @@
         </div>
     </section>
 
+    <!-- SECCIÓN NAVEGACIÓN HOMBRES -->
     <section>
         <div class="contenedor">
+            <!-- Enlace a la sección de productos para hombres -->
             <a href="./seccionHombres.html" style="text-decoration: none;">
                 <div class="seccion-hombre">
                     <div id="titulo-h">
@@ -144,8 +152,10 @@
         </div>
     </section>
 
+    <!-- SECCIÓN NAVEGACIÓN MUJERES -->
     <section>
         <div class="contenedor">
+            <!-- Enlace a la sección de productos para mujeres -->
             <a href="./seccionMujeres.html" style="text-decoration: none;">
                 <div class="seccion-mujer">
                     <div id="titulo-m">
@@ -156,7 +166,9 @@
         </div>
     </section>
 
+    <!-- FOOTER - PIE DE PÁGINA -->
     <footer>
+        <!-- Información superior del footer -->
         <div class="footer-arriba">
             <img src="./img/Logo.png" alt="" id="logo-footer">
             <h4>PopaShoes</h4>
@@ -173,11 +185,13 @@
 
         <hr class="footer-hr">
 
+        <!-- Enlaces de navegación del footer -->
         <div id="footer-botones">
             <a href="./contacto.html">Contacto</a>
             <a href="./sobreNosotros.html">Sobre Nosotros</a>
         </div>
 
+        <!-- Copyright -->
         <p class="footer-popa">© 2025 PopaShoes México S.A. de C.V.</p>
     </footer>
 </body> 
