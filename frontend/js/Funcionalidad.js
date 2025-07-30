@@ -6,7 +6,7 @@ const carritoContador = document.getElementById('carrito-contador');
 const carritoContenido = carritoModal.querySelector('.carrito-modal-content');
 const productos = document.querySelectorAll('.producto');
 
-let carrito = [];
+let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
 // Mostrar/ocultar modal
 carritoBtn.onclick = () => carritoModal.style.display = 'flex';
@@ -111,9 +111,6 @@ productos.forEach(producto => {
         }
         actualizarContador();
         renderizarCarrito();
+        localStorage.setItem('carrito', JSON.stringify(carrito));
     };
 });
-
-// Inicializa el contador y el modal
-actualizarContador();
-renderizarCarrito();

@@ -13,7 +13,6 @@ async function obtenerTenisHombre() {
         .forEach(teni => {
             const div = document.createElement('div');
             div.classList.add('tenis');
-            
             div.innerHTML = `
                 <img src="${teni.imagen}" alt="Sneaker" class="img-tenis">
                 <div class="texto-tenis">
@@ -21,10 +20,21 @@ async function obtenerTenisHombre() {
                     <p>${teni.descripcion}</p>
                     <div class="comprar-tenis">
                         <span>$${teni.precio}</span>
-                        <input type="submit" value="Comprar">
+                        <button class="botonSecc">Agregar al carrito</button>
                     </div>
                 </div>
             `;
+            const btn = div.querySelector('.botonSecc');
+            btn.onclick = () => {
+                let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+                const existente = carrito.find(item => item.nombre === teni.nombre && item.precio === `$${teni.precio}`);
+                if (existente) {
+                    existente.cantidad += 1;
+                } else {
+                    carrito.push({ img: teni.imagen, nombre: teni.nombre, precio: `$${teni.precio}`, cantidad: 1 });
+                }
+                localStorage.setItem('carrito', JSON.stringify(carrito));
+            };
             tenisDiv.appendChild(div);
         });
     } catch(error) {
@@ -52,7 +62,6 @@ async function obtenerTenisPrecio1() {
         .forEach(teni => {
             const div = document.createElement('div');
             div.classList.add('tenis');
-            
             div.innerHTML = `
                 <img src="${teni.imagen}" alt="Sneaker" class="img-tenis">
                 <div class="texto-tenis">
@@ -60,10 +69,21 @@ async function obtenerTenisPrecio1() {
                     <p>${teni.descripcion}</p>
                     <div class="comprar-tenis">
                         <span>$${teni.precio}</span>
-                        <input type="submit" value="Comprar">
+                        <button class="botonSecc">Agregar al carrito</button>
                     </div>
                 </div>
             `;
+            const btn = div.querySelector('.botonSecc');
+            btn.onclick = () => {
+                let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+                const existente = carrito.find(item => item.nombre === teni.nombre && item.precio === `$${teni.precio}`);
+                if (existente) {
+                    existente.cantidad += 1;
+                } else {
+                    carrito.push({ img: teni.imagen, nombre: teni.nombre, precio: `$${teni.precio}`, cantidad: 1 });
+                }
+                localStorage.setItem('carrito', JSON.stringify(carrito));
+            };
             tenisDiv.appendChild(div);
         });
     } catch(error) {
@@ -87,7 +107,6 @@ async function obtenerTenisPrecio2() {
         .forEach(teni => {
             const div = document.createElement('div');
             div.classList.add('tenis');
-            
             div.innerHTML = `
                 <img src="${teni.imagen}" alt="Sneaker" class="img-tenis">
                 <div class="texto-tenis">
@@ -95,10 +114,21 @@ async function obtenerTenisPrecio2() {
                     <p>${teni.descripcion}</p>
                     <div class="comprar-tenis">
                         <span>$${teni.precio}</span>
-                        <input type="submit" value="Comprar">
+                        <button class="botonSecc">Agregar al carrito</button>
                     </div>
                 </div>
             `;
+            const btn = div.querySelector('.botonSecc');
+            btn.onclick = () => {
+                let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+                const existente = carrito.find(item => item.nombre === teni.nombre && item.precio === `$${teni.precio}`);
+                if (existente) {
+                    existente.cantidad += 1;
+                } else {
+                    carrito.push({ img: teni.imagen, nombre: teni.nombre, precio: `$${teni.precio}`, cantidad: 1 });
+                }
+                localStorage.setItem('carrito', JSON.stringify(carrito));
+            };
             tenisDiv.appendChild(div);
         });
     } catch(error) {
@@ -130,10 +160,21 @@ async function obtenerTenisPrecio3() {
                     <p>${teni.descripcion}</p>
                     <div class="comprar-tenis">
                         <span>$${teni.precio}</span>
-                        <input type="submit" value="Comprar">
+                        <button class="botonSecc">Agregar al carrito</button>
                     </div>
                 </div>
             `;
+            const btn = div.querySelector('.botonSecc');
+            btn.onclick = () => {
+                let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+                const existente = carrito.find(item => item.nombre === teni.nombre && item.precio === `$${teni.precio}`);
+                if (existente) {
+                    existente.cantidad += 1;
+                } else {
+                    carrito.push({ img: teni.imagen, nombre: teni.nombre, precio: `$${teni.precio}`, cantidad: 1 });
+                }
+                localStorage.setItem('carrito', JSON.stringify(carrito));
+            };
             tenisDiv.appendChild(div);
         });
     } catch(error) {
@@ -157,7 +198,6 @@ async function obtenerTenisPrecio4() {
         .forEach(teni => {
             const div = document.createElement('div');
             div.classList.add('tenis');
-            
             div.innerHTML = `
                 <img src="${teni.imagen}" alt="Sneaker" class="img-tenis">
                 <div class="texto-tenis">
@@ -165,10 +205,21 @@ async function obtenerTenisPrecio4() {
                     <p>${teni.descripcion}</p>
                     <div class="comprar-tenis">
                         <span>$${teni.precio}</span>
-                        <input type="submit" value="Comprar">
+                        <button class="botonSecc">Agregar al carrito</button>
                     </div>
                 </div>
             `;
+            const btn = div.querySelector('.botonSecc');
+            btn.onclick = () => {
+                let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+                const existente = carrito.find(item => item.nombre === teni.nombre && item.precio === `$${teni.precio}`);
+                if (existente) {
+                    existente.cantidad += 1;
+                } else {
+                    carrito.push({ img: teni.imagen, nombre: teni.nombre, precio: `$${teni.precio}`, cantidad: 1 });
+                }
+                localStorage.setItem('carrito', JSON.stringify(carrito));
+            };
             tenisDiv.appendChild(div);
         });
     } catch(error) {
@@ -193,7 +244,6 @@ async function obtenerTenisRojos() {
         .forEach(teni => {
             const div = document.createElement('div');
             div.classList.add('tenis');
-            
             div.innerHTML = `
                 <img src="${teni.imagen}" alt="Sneaker" class="img-tenis">
                 <div class="texto-tenis">
@@ -201,10 +251,21 @@ async function obtenerTenisRojos() {
                     <p>${teni.descripcion}</p>
                     <div class="comprar-tenis">
                         <span>$${teni.precio}</span>
-                        <input type="submit" value="Comprar">
+                        <button class="botonSecc">Agregar al carrito</button>
                     </div>
                 </div>
             `;
+            const btn = div.querySelector('.botonSecc');
+            btn.onclick = () => {
+                let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+                const existente = carrito.find(item => item.nombre === teni.nombre && item.precio === `$${teni.precio}`);
+                if (existente) {
+                    existente.cantidad += 1;
+                } else {
+                    carrito.push({ img: teni.imagen, nombre: teni.nombre, precio: `$${teni.precio}`, cantidad: 1 });
+                }
+                localStorage.setItem('carrito', JSON.stringify(carrito));
+            };
             tenisDiv.appendChild(div);
         });
     } catch(error) {
@@ -227,7 +288,6 @@ async function obtenerTenisAzules() {
         .forEach(teni => {
             const div = document.createElement('div');
             div.classList.add('tenis');
-            
             div.innerHTML = `
                 <img src="${teni.imagen}" alt="Sneaker" class="img-tenis">
                 <div class="texto-tenis">
@@ -235,10 +295,21 @@ async function obtenerTenisAzules() {
                     <p>${teni.descripcion}</p>
                     <div class="comprar-tenis">
                         <span>$${teni.precio}</span>
-                        <input type="submit" value="Comprar">
+                        <button class="botonSecc">Agregar al carrito</button>
                     </div>
                 </div>
             `;
+            const btn = div.querySelector('.botonSecc');
+            btn.onclick = () => {
+                let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+                const existente = carrito.find(item => item.nombre === teni.nombre && item.precio === `$${teni.precio}`);
+                if (existente) {
+                    existente.cantidad += 1;
+                } else {
+                    carrito.push({ img: teni.imagen, nombre: teni.nombre, precio: `$${teni.precio}`, cantidad: 1 });
+                }
+                localStorage.setItem('carrito', JSON.stringify(carrito));
+            };
             tenisDiv.appendChild(div);
         });
     } catch(error) {
@@ -261,7 +332,6 @@ async function obtenerTenisAmarillos() {
         .forEach(teni => {
             const div = document.createElement('div');
             div.classList.add('tenis');
-            
             div.innerHTML = `
                 <img src="${teni.imagen}" alt="Sneaker" class="img-tenis">
                 <div class="texto-tenis">
@@ -269,10 +339,21 @@ async function obtenerTenisAmarillos() {
                     <p>${teni.descripcion}</p>
                     <div class="comprar-tenis">
                         <span>$${teni.precio}</span>
-                        <input type="submit" value="Comprar">
+                        <button class="botonSecc">Agregar al carrito</button>
                     </div>
                 </div>
             `;
+            const btn = div.querySelector('.botonSecc');
+            btn.onclick = () => {
+                let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+                const existente = carrito.find(item => item.nombre === teni.nombre && item.precio === `$${teni.precio}`);
+                if (existente) {
+                    existente.cantidad += 1;
+                } else {
+                    carrito.push({ img: teni.imagen, nombre: teni.nombre, precio: `$${teni.precio}`, cantidad: 1 });
+                }
+                localStorage.setItem('carrito', JSON.stringify(carrito));
+            };
             tenisDiv.appendChild(div);
         });
     } catch(error) {
@@ -295,7 +376,6 @@ async function obtenerTenisVerdes() {
         .forEach(teni => {
             const div = document.createElement('div');
             div.classList.add('tenis');
-            
             div.innerHTML = `
                 <img src="${teni.imagen}" alt="Sneaker" class="img-tenis">
                 <div class="texto-tenis">
@@ -303,10 +383,21 @@ async function obtenerTenisVerdes() {
                     <p>${teni.descripcion}</p>
                     <div class="comprar-tenis">
                         <span>$${teni.precio}</span>
-                        <input type="submit" value="Comprar">
+                        <button class="botonSecc">Agregar al carrito</button>
                     </div>
                 </div>
             `;
+            const btn = div.querySelector('.botonSecc');
+            btn.onclick = () => {
+                let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+                const existente = carrito.find(item => item.nombre === teni.nombre && item.precio === `$${teni.precio}`);
+                if (existente) {
+                    existente.cantidad += 1;
+                } else {
+                    carrito.push({ img: teni.imagen, nombre: teni.nombre, precio: `$${teni.precio}`, cantidad: 1 });
+                }
+                localStorage.setItem('carrito', JSON.stringify(carrito));
+            };
             tenisDiv.appendChild(div);
         });
     } catch(error) {
@@ -329,7 +420,6 @@ async function obtenerTenisNegros() {
         .forEach(teni => {
             const div = document.createElement('div');
             div.classList.add('tenis');
-            
             div.innerHTML = `
                 <img src="${teni.imagen}" alt="Sneaker" class="img-tenis">
                 <div class="texto-tenis">
@@ -337,10 +427,21 @@ async function obtenerTenisNegros() {
                     <p>${teni.descripcion}</p>
                     <div class="comprar-tenis">
                         <span>$${teni.precio}</span>
-                        <input type="submit" value="Comprar">
+                        <button class="botonSecc">Agregar al carrito</button>
                     </div>
                 </div>
             `;
+            const btn = div.querySelector('.botonSecc');
+            btn.onclick = () => {
+                let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+                const existente = carrito.find(item => item.nombre === teni.nombre && item.precio === `$${teni.precio}`);
+                if (existente) {
+                    existente.cantidad += 1;
+                } else {
+                    carrito.push({ img: teni.imagen, nombre: teni.nombre, precio: `$${teni.precio}`, cantidad: 1 });
+                }
+                localStorage.setItem('carrito', JSON.stringify(carrito));
+            };
             tenisDiv.appendChild(div);
         });
     } catch(error) {
@@ -363,7 +464,6 @@ async function obtenerTenisBlancos() {
         .forEach(teni => {
             const div = document.createElement('div');
             div.classList.add('tenis');
-            
             div.innerHTML = `
                 <img src="${teni.imagen}" alt="Sneaker" class="img-tenis">
                 <div class="texto-tenis">
@@ -371,10 +471,21 @@ async function obtenerTenisBlancos() {
                     <p>${teni.descripcion}</p>
                     <div class="comprar-tenis">
                         <span>$${teni.precio}</span>
-                        <input type="submit" value="Comprar">
+                        <button class="botonSecc">Agregar al carrito</button>
                     </div>
                 </div>
             `;
+            const btn = div.querySelector('.botonSecc');
+            btn.onclick = () => {
+                let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+                const existente = carrito.find(item => item.nombre === teni.nombre && item.precio === `$${teni.precio}`);
+                if (existente) {
+                    existente.cantidad += 1;
+                } else {
+                    carrito.push({ img: teni.imagen, nombre: teni.nombre, precio: `$${teni.precio}`, cantidad: 1 });
+                }
+                localStorage.setItem('carrito', JSON.stringify(carrito));
+            };
             tenisDiv.appendChild(div);
         });
     } catch(error) {
@@ -384,3 +495,5 @@ async function obtenerTenisBlancos() {
 }
 
 obtenerTenisHombre();
+actualizarContador(); 
+renderizarCarrito(); 

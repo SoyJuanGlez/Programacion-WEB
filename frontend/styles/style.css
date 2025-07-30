@@ -49,6 +49,26 @@ body{
     text-align: center;
 }
 
+.botonSecc {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 0.6rem 1.5rem;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    border: none;
+    width: auto;
+    text-align: center;
+    transition: background 0.2s, color 0.2s;
+}
+.botonSecc:hover {
+    background-color: var(--primario);
+    color: var(--oscuro);
+    cursor: pointer;
+}
+
 @media (min-width: 768px) {
     .boton{
         width: auto;

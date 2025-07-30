@@ -114,6 +114,18 @@ app.delete('/deleteShoes/:shoeId', async (req, res) => {
     }
 });
 
+app.get('/api/tenis', async (req, res) => {
+    try {
+        const search = req.query.search || '';
+        const tenis = await Shoe.find({
+            nombre: { $regex: search, $options: 'i' }
+        });
+        res.json(tenis);
+    } catch (error) {
+        res.status(500).json({ message: "Error al buscar tenis.", error });
+    }
+});
+
 app.listen(PORT, () => {
     console.log(`Servidor escuchando en http://localhost:${PORT}`);
 });
